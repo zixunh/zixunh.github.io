@@ -136,9 +136,9 @@
         <div class="row">
             <h2 class="col-md-12 text-center">
                 <b>3DGEER</b>: Exact and Efficient <br> Volumetric Rendering with 3D Gaussians </br>
-                <small>
+                <!-- <small>
                     <strong>TBD</strong>
-                </small>
+                </small> -->
             </h2>
         </div>
         <div class="row">
@@ -193,13 +193,13 @@
                     <li>
                         <a href="">
                         <image src="assets/img/bog/github_pad.png" height="60px">
-                            <h4><strong>Code TBD</strong></h4>
+                            <h4><strong>Code</strong><br><small>(coming soon)</small></h4>
                         </a>
                     </li>
                     <li>
                         <a href="">
                         <image src="assets/img/bog/colab.png" height="60px">
-                            <h4><strong>Demo TBD</strong></h4>
+                            <h4><strong>Demo</strong><br><small>(coming soon)</small></h4>
                         </a>
                     </li>
                     <!-- <li>
@@ -654,102 +654,102 @@
 
 
     <script>
-        const videoIds = ['video_comp1', 'video_comp2', 'video_comp3', 'video_comp4', 
-                        'video_comp5', 'video_comp6', 'video_comp7', 'video_comp8'];
-        const videos = videoIds.map(id => document.getElementById(id));
+        // const videoIds = ['video_comp1', 'video_comp2', 'video_comp3', 'video_comp4', 
+        //                 'video_comp5', 'video_comp6', 'video_comp7', 'video_comp8'];
+        // const videos = videoIds.map(id => document.getElementById(id));
 
-        Promise.all(videos.map(video => {
-        return new Promise(resolve => {
-            if (video.readyState >= 1) {
-            resolve();
-            } else {
-            // 使用 addEventListener 防止覆盖已有的 handler
-            video.addEventListener('loadedmetadata', resolve, { once: true });
-            }
-        });
-        })).then(() => {
-        const period = Math.max(...videos.map(v => v.duration || 1)); // fallback 避免 NaN
+        // Promise.all(videos.map(video => {
+        // return new Promise(resolve => {
+        //     if (video.readyState >= 1) {
+        //     resolve();
+        //     } else {
+        //     // 使用 addEventListener 防止覆盖已有的 handler
+        //     video.addEventListener('loadedmetadata', resolve, { once: true });
+        //     }
+        // });
+        // })).then(() => {
+        // const period = Math.max(...videos.map(v => v.duration || 1)); // fallback 避免 NaN
 
-        videos.forEach(v => {
+        // videos.forEach(v => {
+        //     v.playbackRate = v.duration / period;
+        // });
+        // });
+
+        const videos = [document.getElementById('video_comp1'),
+                        document.getElementById('video_comp2')];
+      
+        // Wait for both to know their durations
+        Promise.all(videos.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos.map(v => v.duration));
+      
+          videos.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
             v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
         });
+    
+        const videos2 = [document.getElementById('video_comp3'),
+                        document.getElementById('video_comp4')];
+      
+        // Wait for both to know their durations
+        Promise.all(videos2.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos2.map(v => v.duration));
+      
+          videos2.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
         });
-
-        // const videos = [document.getElementById('video_comp1'),
-        //                 document.getElementById('video_comp2')];
-      
-        // // Wait for both to know their durations
-        // Promise.all(videos.map(v =>
-        //   v.readyState >= 1
-        //     ? Promise.resolve()
-        //     : new Promise(r => v.onloadedmetadata = r)
-        // )).then(() => {
-        //   // Compute your common period: e.g. the max of their natural lengths
-        //   const period = Math.max(...videos.map(v => v.duration));
-      
-        //   videos.forEach(v => {
-        //     // playbackRate = naturalDuration ÷ targetPeriod
-        //     v.playbackRate = v.duration / period;
-        //     // now each video will take exactly `period` seconds per loop
-        //   });
-        // });
     
-        // const videos2 = [document.getElementById('video_comp3'),
-        //                 document.getElementById('video_comp4')];
+        const videos3 = [document.getElementById('video_comp5'),
+                        document.getElementById('video_comp6')];
       
-        // // Wait for both to know their durations
-        // Promise.all(videos2.map(v =>
-        //   v.readyState >= 1
-        //     ? Promise.resolve()
-        //     : new Promise(r => v.onloadedmetadata = r)
-        // )).then(() => {
-        //   // Compute your common period: e.g. the max of their natural lengths
-        //   const period = Math.max(...videos2.map(v => v.duration));
+        // Wait for both to know their durations
+        Promise.all(videos3.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos3.map(v => v.duration));
       
-        //   videos2.forEach(v => {
-        //     // playbackRate = naturalDuration ÷ targetPeriod
-        //     v.playbackRate = v.duration / period;
-        //     // now each video will take exactly `period` seconds per loop
-        //   });
-        // });
+          videos3.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
+        });
     
-        // const videos3 = [document.getElementById('video_comp5'),
-        //                 document.getElementById('video_comp6')];
+        const videos4 = [document.getElementById('video_comp7'),
+                        document.getElementById('video_comp8')];
       
-        // // Wait for both to know their durations
-        // Promise.all(videos3.map(v =>
-        //   v.readyState >= 1
-        //     ? Promise.resolve()
-        //     : new Promise(r => v.onloadedmetadata = r)
-        // )).then(() => {
-        //   // Compute your common period: e.g. the max of their natural lengths
-        //   const period = Math.max(...videos3.map(v => v.duration));
+        // Wait for both to know their durations
+        Promise.all(videos4.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos4.map(v => v.duration));
       
-        //   videos3.forEach(v => {
-        //     // playbackRate = naturalDuration ÷ targetPeriod
-        //     v.playbackRate = v.duration / period;
-        //     // now each video will take exactly `period` seconds per loop
-        //   });
-        // });
-    
-        // const videos4 = [document.getElementById('video_comp7'),
-        //                 document.getElementById('video_comp8')];
-      
-        // // Wait for both to know their durations
-        // Promise.all(videos4.map(v =>
-        //   v.readyState >= 1
-        //     ? Promise.resolve()
-        //     : new Promise(r => v.onloadedmetadata = r)
-        // )).then(() => {
-        //   // Compute your common period: e.g. the max of their natural lengths
-        //   const period = Math.max(...videos4.map(v => v.duration));
-      
-        //   videos4.forEach(v => {
-        //     // playbackRate = naturalDuration ÷ targetPeriod
-        //     v.playbackRate = v.duration / period;
-        //     // now each video will take exactly `period` seconds per loop
-        //   });
-        // });
+          videos4.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
+        });
     </script>
       
 </body>
