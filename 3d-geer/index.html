@@ -43,6 +43,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
 
+    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
@@ -275,38 +276,159 @@
         <div class="row comp-margin" style="margin-top: 30px;">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Radiance Field Rendering <small>(<a href="./comparison/index_result.html">check more results.</a>)</small>
+                    Radiance Field Rendering <small>(<a href="./comparison/index_result.html">click to zoom-in.</a>)</small>
                 </h3>
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h4>
                     High-Quality Large FoV Results
                 </h4>
-                <div class="aspect-ratio-container">
-                    <video class="responsive-video" controls autoplay loop muted>
-                        <source src="./video/2dgs_vs_3dgs.mp4" type="video/mp4" />
-                    </video>
-                </div>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/scannet3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/scannet1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/alameda1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/alameda2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/alameda3_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/berlin5_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/scannet4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/berlin2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/berlin1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/london1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/london2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/nyc1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h4>
-                    Close-Up Views
+                    Highly Distorted & Close-Up Views
                 </h4>
-                <div class="aspect-ratio-container">
-                    <video class="responsive-video" controls autoplay loop muted>
-                        <source src="./video/colored_mesh.mp4" type="video/mp4" />
-                    </video>
-                </div>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/berlin3_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/berlin4_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/berlin8_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/nyc2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h4>
                     Cross-Camera Rendering <small>(train: FE 1/8; test: PH 1/4)</small>
                 </h4>
-                <div class="aspect-ratio-container">
-                    <video class="responsive-video" controls autoplay loop muted>
-                        <source src="./video/colored_mesh.mp4" type="video/mp4" />
-                    </video>
-                </div>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/fish2pin_demo1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/fish2pin_demo2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/fish2pin_demo3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="./comparison/results/our_video/fish2pin_demo4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -322,7 +444,7 @@
                     MipNeRF360 (Pinhole)
                 </h4>
                 <p class="text-justify">
-                    3DGS <small>(FPS:)</small> v.s. 3DGRT <small>(FPS:)</small> v.s. 3DGEER <small>(FPS:)</small>
+                    3DGS <small>(PSNR: 27.21; FPS: 343)</small> v.s. 3DGRT <small>(PSNR: 27.20; FPS: 52)</small> v.s. 3DGEER (Ours) <small>(PSNR: 27.76; FPS:327)</small>
                 </p>
                 <table width="100%">
                     <tr>
@@ -370,18 +492,18 @@
                     ScanNet++ (Fisheye)
                 </h4>
                 <p class="text-justify">
-                    FisheyeGS <small>(FPS:)</small> v.s. EVER <small>(FPS:)</small> v.s. 3DGEER <small>(FPS:)</small>
+                    FisheyeGS <small>(PSNR:27.81; FPS:213)</small> v.s. EVER <small>(PSNR: 29.47; FPS: 13)</small> v.s. 3DGEER (Ours) <small>(PSNR: 31.50; FPS: 251)</small>
                 </p>
                 <table width="100%">
                     <tr>
                         <td align="left" valign="top" width="30%" style="padding-right: 5px; padding-left: 5px;">
                             <img-comparison-slider>
                                 <figure slot="first" class="before rounded">
-                                    <img width="100%" src="./comparison/results/comparisons/others/3DGS_1.png" class="rounded">
+                                    <img width="100%" src="./comparison/results/comparisons/others/FisheyeGS_40.png" class="rounded">
                                     <figcaption style="font-size: 0.6em;">FisheyeGS</figcaption>
                                 </figure>
                                 <figure slot="second" class="after rounded">
-                                    <img width="100%" src="./comparison/results/comparisons/others/our_1.png" class="rounded">
+                                    <img width="100%" src="./comparison/results/comparisons/others/our_40.png" class="rounded">
                                     <figcaption style="font-size: 0.6em;">Ours</figcaption>
                                 </figure>
                             </img-comparison-slider>
@@ -389,11 +511,11 @@
                         <td align="left" valign="top" width="30%" style="padding-right: 5px; padding-left: 5px;">
                             <img-comparison-slider>
                                 <figure slot="first" class="before rounded">
-                                    <img width="100%" src="./comparison/results/comparisons/others/3DGRT_1.png" class="rounded">
+                                    <img width="100%" src="./comparison/results/comparisons/others/EVER_40.png" class="rounded">
                                     <figcaption style="font-size: 0.6em;">EVER</figcaption>
                                 </figure>
                                 <figure slot="second" class="after rounded">
-                                    <img width="100%" src="./comparison/results/comparisons/others/our_1.png" class="rounded">
+                                    <img width="100%" src="./comparison/results/comparisons/others/our_40.png" class="rounded">
                                     <figcaption style="font-size: 0.6em;">Ours</figcaption>
                                 </figure>
                             </img-comparison-slider>
@@ -401,11 +523,11 @@
                         <td align="left" valign="top" width="30%" style="padding-right: 5px; padding-left: 5px;">
                             <img-comparison-slider>
                                 <figure slot="first" class="before rounded">
-                                    <img width="100%" src="./comparison/results/comparisons/others/GT_1.png" class="rounded">
+                                    <img width="100%" src="./comparison/results/comparisons/others/GT_40.png" class="rounded">
                                     <figcaption style="font-size: 0.6em;">Groundtruth</figcaption>
                                 </figure>
                                 <figure slot="second" class="after rounded">
-                                    <img width="100%" src="./comparison/results/comparisons/others/our_1.png" class="rounded">
+                                    <img width="100%" src="./comparison/results/comparisons/others/our_40.png" class="rounded">
                                     <figcaption style="font-size: 0.6em;">Ours</figcaption>
                                 </figure>
                             </img-comparison-slider>
@@ -415,29 +537,84 @@
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h4>
-                    ZipNeRF Close-Up Views
+                    ZipNeRF Close-Up Views <small>(<a href="./comparison/index_zip_1.html">click to zoom-in.</a>)</small>
                 </h4>
                 <p class="text-justify">
-                    EVER v.s. 3DGEER
+                    Our method (3DGEER) can handle soft shadow / lights or close views where the solid ellipsoid-based model (EVER) suffers.
                 </p>
-                <div class="aspect-ratio-container">
-                    <video class="responsive-video" controls autoplay loop muted>
-                        <source src="./video/colored_mesh.mp4" type="video/mp4" />
-                    </video>
-                </div>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">EVER</p>
+                            <video id="video_comp5" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/EVER_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">Ours</p>
+                            <video id="video_comp6" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/our_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">EVER</p>
+                            <video id="video_comp7" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/EVER_4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">Ours</p>
+                            <video id="video_comp8" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/our_4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <h4>
-                    ZipNeRF Large FoV Views
+                    ZipNeRF Large FoV Views <small>(<a href="./comparison/index_zip_2.html">click to zoom-in.</a>)</small>
                 </h4>
                 <p class="text-justify">
-                    FisheyeGS v.s. 3DGUT v.s. 3DGEER
+                    3DGUT and FisheyeGS are based on equidistant model for representations, which fail in much wider FoV. (See paper Fig. 5). 
+                    Our method (3DGEER) can effectively sample rays in larger FoV regions and show much better results.
                 </p>
-                <div class="aspect-ratio-container">
-                    <video class="responsive-video" controls autoplay loop muted>
-                        <source src="./video/colored_mesh.mp4" type="video/mp4" />
-                    </video>
-                </div>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">3DGUT</p>
+                            <video id="video_comp1" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/3DGUT_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">Ours</p>
+                            <video id="video_comp2" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/our_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">FisheyeGS</p>
+                            <video id="video_comp3" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/fisheyeGS_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">Ours</p>
+                            <video id="video_comp4" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/comparisons/videos/our_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
 
@@ -473,6 +650,86 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        const videos = [document.getElementById('video_comp1'),
+                        document.getElementById('video_comp2')];
+      
+        // Wait for both to know their durations
+        Promise.all(videos.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos.map(v => v.duration));
+      
+          videos.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
+        });
+    
+        const videos2 = [document.getElementById('video_comp3'),
+                        document.getElementById('video_comp4')];
+      
+        // Wait for both to know their durations
+        Promise.all(videos2.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos2.map(v => v.duration));
+      
+          videos2.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
+        });
+    
+        const videos3 = [document.getElementById('video_comp5'),
+                        document.getElementById('video_comp6')];
+      
+        // Wait for both to know their durations
+        Promise.all(videos3.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos3.map(v => v.duration));
+      
+          videos3.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
+        });
+    
+        const videos4 = [document.getElementById('video_comp7'),
+                        document.getElementById('video_comp8')];
+      
+        // Wait for both to know their durations
+        Promise.all(videos4.map(v =>
+          v.readyState >= 1
+            ? Promise.resolve()
+            : new Promise(r => v.onloadedmetadata = r)
+        )).then(() => {
+          // Compute your common period: e.g. the max of their natural lengths
+          const period = Math.max(...videos4.map(v => v.duration));
+      
+          videos4.forEach(v => {
+            // playbackRate = naturalDuration ÷ targetPeriod
+            v.playbackRate = v.duration / period;
+            // now each video will take exactly `period` seconds per loop
+          });
+        });
+    </script>
+      
 </body>
 
 </html>

@@ -439,210 +439,99 @@ hr {
     <div id="authors">
   
         <div class="affil-row">
-            <div class="venue text-center">Visual Results of the Paper:<br> <b>3DGEER: </b>Exact and Efficient Volumetric Rendering with 3D Gaussians</div>
+            <div class="venue text-center">ZipNeRF Visual Comparisons of the Paper:<br> <b>3DGEER: </b>Exact and Efficient Volumetric Rendering with 3D Gaussians</div>
         </div>
     </div>
 
     <br>
 
-    <div id="Results" class="container pt-2">
     <div class="row">
-        <h2>High-Quality Large FoV Results</h2>
-    </div>
-    <hr>
-    </div>
-
-    <!-- <div class="container">
-        <div class="row"><div class="col">
-            <p class="text-justify">For the task of novel view synthesis, our method performs on par with or slightly better than 3D Gaussian Splatting and other state-of-the-art methods in terms of quality.</p>
-        </div></div>
-    </div> -->
-    
-    <div class="container">
-        <div class="row">
-            <div class="col col-6">
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/scannet3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/scannet1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/alameda1_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/alameda2_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/alameda3_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <!-- <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin1_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video> -->
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin5_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                
-            </div>
-
-            <div class="col col-6">
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/scannet4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                
-                <!-- <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/scannet2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video> -->
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin2_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <!-- <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/london3_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video> -->
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin1_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/london1_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/london2_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/nyc1_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                
-            </div>
+    <section class="container"></section>
+        <h2 style="margin-top: 30px;">Artifacts in Equidistant-based Methods </h2>
+        <hr>
+        3DGUT and FisheyeGS are based on equidistant model for representations, which fail in much wider FoV. (See paper Fig. 5). Our BEAP can effectively sample rays in larger FoV regions and show much better results. 
+        <p></p>
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">3DGUT</p>
+            <video id="video_comp1" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/3DGUT_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>  
 
-    <div id="Results" class="container pt-2">
-    <div class="row" style="margin-top: 20px;">
-        <h2>Close-Up Views</h2>
-    </div>
-    <hr>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col col-6">
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin3_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
 
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin4_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-            </div>
-
-            <div class="col col-6">
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/berlin8_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <p style="text-align: center;"></p>
-                <video width="100%"  muted loop autoplay>
-                    <source src="results/our_video/nyc2_web.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">Ours</p>
+            <video id="video_comp2" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/our_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>  
 
-        <div id="Results" class="container pt-2">
-            <div class="row" style="margin-top: 20px;">
-                <h2>Cross-Camera</h2>
-            </div>
-            <hr>
+        <br>
+        <p></p>
+
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">FisheyeGS</p>
+            <video id="video_comp3" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/fisheyeGS_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-        
-        <div class="container">
-            <div class="row">
-                <p style="text-align: center; color: slateblue;">train: FE 1/8; test: PH 1/4</p>
-                <div class="col col-6">
-                    <!-- <p style="text-align: center;"></p> -->
-                    <video width="100%"  muted loop autoplay>
-                        <source src="results/our_video/fish2pin_demo1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-    
-                    <!-- <p style="text-align: center;"></p> -->
-                    <video width="100%"  muted loop autoplay>
-                        <source src="results/our_video/fish2pin_demo2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-    
-                </div>
-    
-                <div class="col col-6">
-                    <!-- <p style="text-align: center;"></p> -->
-                    <video width="100%"  muted loop autoplay>
-                        <source src="results/our_video/fish2pin_demo3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-    
-                    <!-- <p style="text-align: center;"></p> -->
-                    <video width="100%"  muted loop autoplay>
-                        <source src="results/our_video/fish2pin_demo4.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </div>  
-   
+
+
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">Ours</p>
+            <video id="video_comp4" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/our_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+<!-- 
+    <p></p>
+    <p></p>
+    <section class="container"></section>
+        <h2 style="margin-top: 30px;">Artifacts in Solid Ellipsoid-based Method </h2>
+        <hr>
+        EVER's solid ellipsoid model is not suitable for soft shadow / lights or close views.
+        <p></p>
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">EVER</p>
+            <video id="video_comp5" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/EVER_3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">Ours</p>
+            <video id="video_comp6" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/our_3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p></p>
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">EVER</p>
+            <video id="video_comp7" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/EVER_4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
+        <div class="col col-6 rounded">
+            <p style="text-align: center;">Ours</p>
+            <video id="video_comp8" width="100%"  muted loop autoplay>
+                <source src="results/comparisons/videos/our_4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section> -->
 
 </div>
 
@@ -685,66 +574,43 @@ hr {
       });
     });
 
-    const videos3 = [document.getElementById('video_comp5'),
-                    document.getElementById('video_comp6')];
+    // const videos3 = [document.getElementById('video_comp5'),
+    //                 document.getElementById('video_comp6')];
   
-    // Wait for both to know their durations
-    Promise.all(videos3.map(v =>
-      v.readyState >= 1
-        ? Promise.resolve()
-        : new Promise(r => v.onloadedmetadata = r)
-    )).then(() => {
-      // Compute your common period: e.g. the max of their natural lengths
-      const period = Math.max(...videos3.map(v => v.duration));
+    // // Wait for both to know their durations
+    // Promise.all(videos3.map(v =>
+    //   v.readyState >= 1
+    //     ? Promise.resolve()
+    //     : new Promise(r => v.onloadedmetadata = r)
+    // )).then(() => {
+    //   // Compute your common period: e.g. the max of their natural lengths
+    //   const period = Math.max(...videos3.map(v => v.duration));
   
-      videos3.forEach(v => {
-        // playbackRate = naturalDuration ÷ targetPeriod
-        v.playbackRate = v.duration / period;
-        // now each video will take exactly `period` seconds per loop
-      });
-    });
+    //   videos3.forEach(v => {
+    //     // playbackRate = naturalDuration ÷ targetPeriod
+    //     v.playbackRate = v.duration / period;
+    //     // now each video will take exactly `period` seconds per loop
+    //   });
+    // });
 
-    const videos4 = [document.getElementById('video_comp7'),
-                    document.getElementById('video_comp8')];
+    // const videos4 = [document.getElementById('video_comp7'),
+    //                 document.getElementById('video_comp8')];
   
-    // Wait for both to know their durations
-    Promise.all(videos4.map(v =>
-      v.readyState >= 1
-        ? Promise.resolve()
-        : new Promise(r => v.onloadedmetadata = r)
-    )).then(() => {
-      // Compute your common period: e.g. the max of their natural lengths
-      const period = Math.max(...videos4.map(v => v.duration));
+    // // Wait for both to know their durations
+    // Promise.all(videos4.map(v =>
+    //   v.readyState >= 1
+    //     ? Promise.resolve()
+    //     : new Promise(r => v.onloadedmetadata = r)
+    // )).then(() => {
+    //   // Compute your common period: e.g. the max of their natural lengths
+    //   const period = Math.max(...videos4.map(v => v.duration));
   
-      videos4.forEach(v => {
-        // playbackRate = naturalDuration ÷ targetPeriod
-        v.playbackRate = v.duration / period;
-        // now each video will take exactly `period` seconds per loop
-      });
-    });
-</script>
-  
-
-<script>
-    $('#carouselReal').carousel({interval: 12000});
-    $('#carouselSynthetic').carousel({interval: 12000});
-    $('#carouselDistorted').carousel({interval: 4000});
-    $('#carouselTeaser').carousel({interval: 0});
-
-    $('#carouselReal').on('slide.bs.carousel', function (e) {
-        var $video = $(e.relatedTarget).find('video');
-        if ($video.length) {
-        $video.get(0).currentTime = 0; // Reset video to beginning
-        }
-    });
-
-    $('#carouselSynthetic').on('slide.bs.carousel', function (e) {
-        var $video = $(e.relatedTarget).find('video');
-        if ($video.length) {
-        $video.get(0).currentTime = 0; // Reset video to beginning
-        }
-    });
-
+    //   videos4.forEach(v => {
+    //     // playbackRate = naturalDuration ÷ targetPeriod
+    //     v.playbackRate = v.duration / period;
+    //     // now each video will take exactly `period` seconds per loop
+    //   });
+    // });
 </script>
 
 <div class="container"><div class="row">
