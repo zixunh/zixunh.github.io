@@ -439,7 +439,7 @@ hr {
     <div id="authors">
   
         <div class="affil-row">
-            <div class="venue text-center">Visual comparison with <b>3DGEER: </b>Exact and Efficient Volumetric Rendering with 3D Gaussians</div>
+            <div class="venue text-center">Visual Results & Comparisons of the Paper:<br> <b>3DGEER: </b>Exact and Efficient Volumetric Rendering with 3D Gaussians</div>
         </div>
     </div>
 
@@ -563,7 +563,7 @@ hr {
     </div>  
 
     <div id="Results" class="container pt-2">
-    <div class="row">
+    <div class="row" style="margin-top: 20px;">
         <h2>Close-Up Views</h2>
     </div>
     <hr>
@@ -602,23 +602,24 @@ hr {
         </div>
     </div>  
 
-    <div id="Results" class="container pt-2">
-        <div class="row">
-            <h2>Cross-Camera: Fisheye Training -> Pinhole Rendering</h2>
-        </div>
-        <hr>
+        <div id="Results" class="container pt-2">
+            <div class="row" style="margin-top: 20px;">
+                <h2>Cross-Camera</h2>
+            </div>
+            <hr>
         </div>
         
         <div class="container">
             <div class="row">
+                <p style="text-align: center; color: slateblue;">train: FE 1/8; test: PH 1/4</p>
                 <div class="col col-6">
-                    <p style="text-align: center;"></p>
+                    <!-- <p style="text-align: center;"></p> -->
                     <video width="100%"  muted loop autoplay>
                         <source src="results/our_video/fish2pin_demo1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
     
-                    <p style="text-align: center;"></p>
+                    <!-- <p style="text-align: center;"></p> -->
                     <video width="100%"  muted loop autoplay>
                         <source src="results/our_video/fish2pin_demo2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -627,13 +628,13 @@ hr {
                 </div>
     
                 <div class="col col-6">
-                    <p style="text-align: center;"></p>
+                    <!-- <p style="text-align: center;"></p> -->
                     <video width="100%"  muted loop autoplay>
                         <source src="results/our_video/fish2pin_demo3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
     
-                    <p style="text-align: center;"></p>
+                    <!-- <p style="text-align: center;"></p> -->
                     <video width="100%"  muted loop autoplay>
                         <source src="results/our_video/fish2pin_demo4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -643,13 +644,13 @@ hr {
         </div>  
 
     <section class="container">
-        <h2>Comparison: Evaluation on Fisheye</h2>
+        <h2 style="margin-top: 20px;">Comparison: Evaluation on Fisheye</h2>
         <hr>
     </section>
 
     <div class="container justify-content-center"></div>
         <div class="row">
-            <p style="text-align: center; color: slateblue;">Fisheye->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -698,7 +699,7 @@ hr {
             </div>
 
             <p></p>
-            <p style="text-align: center; color: slateblue;">Pinhole->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -753,9 +754,9 @@ hr {
             
 
 
-            <div style="height: 2px; background-color: black; width: 100%;"></div>
+            <!-- <div style="height: 2px; background-color: black; width: 100%;"></div> -->
             <p></p>
-            <p style="text-align: center; color: slateblue;">Fisheye->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -806,7 +807,7 @@ hr {
                 <p></p>
             </div>
 
-            <p style="text-align: center; color: slateblue;">Pinhole->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -858,9 +859,9 @@ hr {
                 
             </div>
 
-            <div style="height: 2px; background-color: black; width: 100%;"></div>
+            <!-- <div style="height: 2px; background-color: black; width: 100%;"></div> -->
             <p></p>
-            <p style="text-align: center; color: slateblue;">Fisheye->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -911,7 +912,7 @@ hr {
                 <p></p>
             </div>
 
-            <p style="text-align: center; color: slateblue;">Pinhole->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -969,13 +970,13 @@ hr {
 
 
     <section class="container"></section>
-        <h2>Comparison: Evaluation on Pinhole (ZipNeRF Official Undistorted Images)</h2>
+        <h2 style="margin-top: 30px;">Comparison: Evaluation on Pinhole (ZipNeRF Official Undistorted Images)</h2>
         <hr>
     </section>
 
     <div class="container justify-content-center"></div>
         <div class="row">
-            <p style="text-align: center; color: slateblue;">Pinhole->Pinhole</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: PH 1/4</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1027,7 +1028,7 @@ hr {
                 <p></p>
             </div>
         
-            <p style="text-align: center; color: slateblue;">Fisheye->Pinhole</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: PH 1/4</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1080,9 +1081,9 @@ hr {
             </div>
 
 
-            <div style="height: 2px; background-color: black; width: 100%;"></div>
+            <!-- <div style="height: 2px; background-color: black; width: 100%;"></div> -->
             <p></p>
-            <p style="text-align: center; color: slateblue;">Pinhole->Pinhole</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: PH 1/4</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1133,7 +1134,7 @@ hr {
                 <p></p>
             </div>
 
-            <p style="text-align: center; color: slateblue;">Fisheye->Pinhole</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: PH 1/4</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1187,14 +1188,14 @@ hr {
     <br>
 
     <section class="container">
-        <h2>Comparison: Highly Distorted Views & Close-Up Views </h2>
+        <h2 style="margin-top: 30px;">Comparison: Highly Distorted Views & Close-Up Views </h2>
         <hr>
     </section>
 
 
     <div class="container justify-content-center"></div>
         <div class="row">
-            <p style="text-align: center; color: slateblue;">Fisheye->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1246,7 +1247,7 @@ hr {
                 <p></p>
             </div>
         
-            <p style="text-align: center; color: slateblue;">Pinhole->Fisheye</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: FE 1/8</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1299,9 +1300,9 @@ hr {
             </div>
 
 
-            <div style="height: 2px; background-color: black; width: 100%;"></div>
+            <!-- <div style="height: 2px; background-color: black; width: 100%;"></div> -->
             <p></p>
-            <p style="text-align: center; color: slateblue;">Pinhole->Pinhole</p>
+            <p style="text-align: center; color: slateblue;">train: PH 1/4; test: PH 1/4</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1352,7 +1353,7 @@ hr {
                 <p></p>
             </div>
 
-            <p style="text-align: center; color: slateblue;">Fisheye->Pinhole</p>
+            <p style="text-align: center; color: slateblue;">train: FE 1/8; test: PH 1/4</p>
             <div class="col col-6 rounded">
                 <img-comparison-slider>
                     <figure slot="first" class="before rounded">
@@ -1405,7 +1406,7 @@ hr {
             </div>
     <br>
 
-    <section class="container"></section>
+    <!-- <section class="container"></section>
         <h2>Other Comparison </h2>
         <hr>
         <div class="col col-4 rounded">
@@ -1453,13 +1454,13 @@ hr {
             <p></p>
             
         </div>
-    </section>
+    </section> -->
 
 
 
 
     <section class="container"></section>
-        <h2>Artifacts in Equidistant-based Methods </h2>
+        <h2 style="margin-top: 30px;">Artifacts in Equidistant-based Methods </h2>
         <hr>
         3DGUT and FisheyeGS are based on equidistant model for representations, which fail in much wider FoV. (See paper Fig. 5). Our BEAP can effectively sample rays in larger FoV regions and show much better results. 
         <p></p>
@@ -1505,7 +1506,7 @@ hr {
     <p></p>
     <p></p>
     <section class="container"></section>
-        <h2>Artifacts in Solid Ellipsoid-based Method </h2>
+        <h2 style="margin-top: 30px;">Artifacts in Solid Ellipsoid-based Method </h2>
         <hr>
         EVER's solid ellipsoid model is not suitable for soft shadow / lights or close views.
         <p></p>
