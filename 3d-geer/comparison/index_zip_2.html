@@ -618,29 +618,6 @@ hr {
       });
     });
 </script>
-  
-
-<script>
-    $('#carouselReal').carousel({interval: 12000});
-    $('#carouselSynthetic').carousel({interval: 12000});
-    $('#carouselDistorted').carousel({interval: 4000});
-    $('#carouselTeaser').carousel({interval: 0});
-
-    $('#carouselReal').on('slide.bs.carousel', function (e) {
-        var $video = $(e.relatedTarget).find('video');
-        if ($video.length) {
-        $video.get(0).currentTime = 0; // Reset video to beginning
-        }
-    });
-
-    $('#carouselSynthetic').on('slide.bs.carousel', function (e) {
-        var $video = $(e.relatedTarget).find('video');
-        if ($video.length) {
-        $video.get(0).currentTime = 0; // Reset video to beginning
-        }
-    });
-
-</script>
 
 <div class="container"><div class="row">
     <nav class="navbar navbar-light bg-light">
