@@ -1,6 +1,6 @@
 @misc{DTTDv2,
       title={Robust Digital-Twin Localization via An RGBD-based Transformer Network and A Comprehensive Evaluation on a Mobile Dataset}, 
-      author={Zixun Huang and Keling Yao and Seth Z. Zhao and Chuanyu Pan and Tianjian Xu and Weiyu Feng and Allen Y. Yang},
+      author={Zixun Huang and Keling Yao and Seth Z. Zhao and Chuanyu Pan and Allen Y. Yang},
       year={2023},
       eprint={2309.13570},
       archivePrefix={arXiv},
