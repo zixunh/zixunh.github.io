@@ -2798,6 +2798,7 @@ figcaption {
 }
 
 .page-conent {
+  /* width: 100%; */
   margin-left: 10%;
   margin-right: 10%;
   position: relative;
@@ -6186,7 +6187,7 @@ figcaption {
 
 .link-7 {
   color: var(--0-85white);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .link-7:hover {
@@ -6525,17 +6526,17 @@ figcaption {
   font-weight: 500;
 }
 
-.text-span-16, .text-span-17 {
+/* .text-span-16, .text-span-17 {
   text-decoration: underline;
-}
+} */
 
 .text-span-18, .text-span-19 {
   font-weight: 700;
 }
 
-.text-span-20, .text-span-21 {
+/* .text-span-20, .text-span-21 {
   text-decoration: underline;
-}
+} */
 
 .link-13, .link-14, .link-15, .link-16 {
   color: var(--0-85white);
@@ -6586,9 +6587,9 @@ figcaption {
   line-height: 1em;
 }
 
-.text-span-32 {
+/* .text-span-32 {
   text-decoration: underline;
-}
+} */
 
 .text-span-33 {
   text-align: center;
