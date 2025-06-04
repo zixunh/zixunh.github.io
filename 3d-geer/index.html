@@ -6,6 +6,83 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>3D Gaussian Exact and Efficient Rendering</title>
+    <style>
+        .highlight-row {
+            background-color: #fffae6; /* 柔和黄色高亮 */
+            transition: background-color 0.3s ease;
+        }
+        .highlight-our {
+            background-color: #e6ffe7; /* 柔和绿色高亮 */
+            transition: background-color 0.3s ease;
+        }
+        .checkbox-group {
+          margin-bottom: 16px;
+        }
+      
+        .checkbox-label {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: normal;
+          margin-bottom: 10px;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+        }
+      
+        .checkbox-label:hover {
+          background-color: #f5f5f5;
+          border-radius: 6px;
+        }
+      
+        /* 隐藏原始 checkbox */
+        .checkbox-label input[type="checkbox"] {
+          display: none;
+        }
+      
+        /* 自定义 checkbox 外框 */
+        .custom-checkbox {
+          flex-shrink: 0;  /* 不允许被压缩 */
+          width: 16px;
+          height: 16px;
+          border: 2px solid #333;
+          border-radius: 3px;
+          margin-right: 10px;
+          position: relative;
+        }
+      
+        /* 显示勾 ✔️ */
+        .checkbox-label input[type="checkbox"]:checked + .custom-checkbox::after {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 0px;
+          width: 6px;
+          height: 10px;
+          border: solid #333;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      
+        /* 禁止点击样式 */
+        .readonly {
+            cursor: default !important;
+        }
+
+        .readonly:hover {
+            background-color: transparent !important;
+        }
+
+        table.uniform-table {
+          border-collapse: collapse;
+          width: 100%;
+          font-size: small;
+        }
+        .uniform-table th,
+        .uniform-table td {
+          border: 1px solid #ccc;
+          padding: 4px;
+        }
+      </style>
 
     <meta name="description"
         content="3DGEER: Exact and Efficient Volumetric Rendering with 3D Gaussians">
@@ -270,26 +347,193 @@
                 <h3>
                     Paper Fast Forward
                 </h3>
+                <!-- <p class="text-justify">
+                    Our method consistently outperforms state-of-the-art approaches across multiple datasets,
+                    with notable gains on wide-FoV neural reconstruction benchmarks.
+                    Our key insights are as follows:
+                  </p>
+                  <ol class="text-justify" style="margin-left: 1em;">
+                    <li>We first propose volumetric rendering with a first-principle derived, closed-form solution of both exact ray-Gaussian integral and association.</li>
+                    <li>We present high-speed rendering using an exact and efficient ray-particle association method.</li>
+                    <li>We provide more spatially uniform color supervision with an equiangular ray sampling strategy.</li>
+                  </ol> -->
                 <div class="text-center">
                     <div style="position:relative;padding-top:56.25%;">
                         <iframe src="https://www.youtube.com/embed/Grl9jSMIgds" allowfullscreen
                             style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </div>
-                <p class="text-justify" style="margin-top: 10px;">
-                    In summary, our contributions are as follows: (i) We present the first complete, first-principle derived, closed-form solution for exact volumetric Gaussian rendering; 
-                    (ii) We propose an exact and efficient ray-particle association method that enables high speed rendering;
-                    (iii) We introduce an equiangular ray sampling strategy that provides more spatially uniform color supervision;
-                    (iv) Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
-                </p>
             </div>
         </div>
 
-        <div class="row comp-margin" style="margin-top: 30px;">
+
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify" style="margin-top: 10px;">
+                    Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
+                    And our key insights are as follows: (i) We first propose volumetric rendering with first-principle derived, closed-form solution of both exact ray-Gaussian integral and association; 
+                    (ii) We present high speed rendering using an exact and efficient ray-particle association method;
+                    (iii) We provide more spatially uniform color supervision with an equiangular ray sampling strategy.
+                </p>
+                <!-- <h3>
+                    TL;DR
+                </h3>
+                <p class="text-justify">
+                    Our method (3DGEER) consistently outperforms SOTA on wide-FoV neural reconstruction tasks. It introduces:
+                    (i) a first-principle, closed-form solution for exact ray-Gaussian rendering,
+                    (ii) an efficient exact ray-particle association for high-speed rendering, and
+                    (iii) an equiangular sampling strategy enabling uniform color supervision.
+                </p> -->
+                <!-- <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="45%" style="padding-right: 5px; padding-left: 5px;">
+                            <p class="text-justify">Specifically, <span class="highlight-our">our method (3DGEER)</span> enables:</p>
+                            <div class="checkbox-group">
+                            <label class="checkbox-label readonly">
+                                <input type="checkbox" id="checkboxA2" checked disabled>
+                                <span class="custom-checkbox"></span>
+                                projective exactness (in both ray-Gaussian association and rendering)
+                            </label>
+                            <label class="checkbox-label readonly">
+                                <input type="checkbox" id="checkboxB2" checked disabled>
+                                <span class="custom-checkbox"></span>
+                                high-FPS rendering
+                            </label>
+                            <label class="checkbox-label readonly">
+                                <input type="checkbox" id="checkboxC2" checked disabled>
+                                <span class="custom-checkbox"></span>
+                                uniform color supervision
+                            </label>
+                            </div>
+                        </td>
+                        <td align="left" valign="top" width="45%" style="padding-right: 5px; padding-left: 5px; ">
+                            <p class="text-justify"><span class="highlight-row">Other SOTA methods</span> can only satisfy one of the followings: <br><small>(Select a checkbox to see the corresponding methods in the table)</small></p>
+                            <div class="checkbox-group" id="group-others">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="checkboxA1" data-target="row-ever row-3dgrt row-3dgeer">
+                                <span class="custom-checkbox"></span>
+                                projective exactness (in both ray-Gaussian association and rendering)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="checkboxB1" data-target="row-3dgs row-fishgs row-gspp row-3dgut row-3dgeer">
+                                <span class="custom-checkbox"></span>
+                                high-FPS rendering
+                            </label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+             -->
+                
+                <!-- <table class="uniform-table" border="1" cellspacing="0" cellpadding="4" style="font-size: small; border-collapse: collapse; width: 100%;">
+  
+                    <thead>
+                      <tr>
+                        <th style="text-align: left;">Method</th>
+                        <th style="text-align: center;">Render</th>
+                        <th style="text-align: center;" colspan="2">Particle Asso.</th>
+                        <th style="text-align: center;">Particle Type</th>
+                        <th style="text-align: center;">Large FoV</th>
+                        <th style="text-align: center;">High FPS</th>
+                        <th style="text-align: center;">Exact Meth.</th>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <th></th>
+                        <th style="text-align: center;">Meth.</th>
+                        <th style="text-align: center;">Scope</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td colspan="8" style="text-align: center; background-color: #ddd;">Splat-based Methods</td></tr>
+                  
+                      <tr id="row-3dgs">
+                        <td style="text-align: left;">3DGS <span style="font-size: 0.8em;">[Kerbl et al. 2023]</span></td>
+                        <td style="text-align: center;">Splat.</td>
+                        <td style="text-align: center;">EWA</td>
+                        <td style="text-align: center;">Img.</td>
+                        <td style="text-align: center;">3D Gauss.</td>
+                        <td style="text-align: center;">✗</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✗</td>
+                      </tr>
+                      <tr id="row-fishgs">
+                        <td style="text-align: left;">FisheyeGS <span style="font-size: 0.8em;">[Liao et al. 2024]</span></td>
+                        <td style="text-align: center;">Splat.</td>
+                        <td style="text-align: center;">EWA</td>
+                        <td style="text-align: center;">Img.</td>
+                        <td style="text-align: center;">3D Gauss.</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✗</td>
+                      </tr>
+ 
+                      <tr><td colspan="8" style="text-align: center; background-color: #ddd;">Ray-based Methods</td></tr>
+
+                      <tr id="row-ever">
+                        <td style="text-align: left;">EVER <span style="font-size: 0.8em;">[Mai et al. 2024]</span></td>
+                        <td style="text-align: center;">Ray</td>
+                        <td style="text-align: center;">BVH</td>
+                        <td style="text-align: center;">Scene</td>
+                        <td style="text-align: center;">3D Ellip.</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✗</td>
+                        <td style="text-align: center;">✓</td>
+                      </tr>
+                      <tr id="row-3dgrt">
+                        <td style="text-align: left;">3DGRT <span style="font-size: 0.8em;">[Moenne-Loccoz et al. 2024]</span></td>
+                        <td style="text-align: center;">Ray</td>
+                        <td style="text-align: center;">BVH</td>
+                        <td style="text-align: center;">Scene</td>
+                        <td style="text-align: center;">3D Gauss.</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✗</td>
+                        <td style="text-align: center;">✓</td>
+                      </tr>
+                      <tr id="row-3dgut">
+                        <td style="text-align: left;">3DGUT <span style="font-size: 0.8em;">[Wu et al. 2025]</span></td>
+                        <td style="text-align: center;">Ray</td>
+                        <td style="text-align: center;">UT</td>
+                        <td style="text-align: center;">Img.</td>
+                        <td style="text-align: center;">3D Gauss.</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✗</td>
+                      </tr>
+                      <tr id="row-3dgeer">
+                        <td style="text-align: left;"><strong>3DGEER (Ours)</strong></td>
+                        <td style="text-align: center;">Ray</td>
+                        <td style="text-align: center;">PBF</td>
+                        <td style="text-align: center;">Frust.</td>
+                        <td style="text-align: center;">3D Gauss.</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                        <td style="text-align: center;">✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="text-justify" style="caption-side: bottom; padding-top: 10px;"><small><b>Summary of Volumetric Particle Rendering Methods w.r.t. Exactness.</b> The top section lists splatting-based methods, while the bottom section presents ray-marching-based approaches—some of which still rely on projective approximations (e.g., EWA or Unscented Transform) during ray-particle association.</small></p> -->
+
+            </div>
+        </div>
+
+        
+
+        <div class="row comp-margin" style="margin-top: 10px;">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Visual Result <small>(<a href="comparison/index_result.html">click to zoom-in.</a>)</small>
                 </h3>
+                <!-- <p class="text-justify" style="margin-top: 10px;">
+                    Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
+                    And our key insights are as follows: (i) We first propose volumetric rendering with first-principle derived, closed-form solution of both exact ray-Gaussian integral and association; 
+                    (ii) We present high speed rendering using an exact and efficient ray-particle association method;
+                    (iii) We provide more spatially uniform color supervision with an equiangular ray sampling strategy;
+                </p> -->
                 <!-- <p class="text-justify">
                     Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
                 </p> -->
@@ -641,6 +885,10 @@
                 <canvas height=0 class="videoMerge" id="comp1Merge"></canvas>
             </div> -->
         </div>
+
+
+        
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -661,6 +909,8 @@
                   }</pre>
             </div>
         </div>
+
+        
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -771,6 +1021,39 @@
             v.playbackRate = v.duration / period;
             // now each video will take exactly `period` seconds per loop
           });
+        });
+
+        // 互斥逻辑
+        const checkboxA1 = document.getElementById('checkboxA1');
+        const checkboxB1 = document.getElementById('checkboxB1');
+
+        checkboxA1.addEventListener('change', () => {
+            if (checkboxA1.checked) checkboxB1.checked = false;
+        });
+
+        checkboxB1.addEventListener('change', () => {
+            if (checkboxB1.checked) checkboxA1.checked = false;
+        });
+
+        // 禁止更改 "Our method" 部分
+        document.getElementById('checkboxA2').addEventListener('click', e => e.preventDefault());
+        document.getElementById('checkboxB2').addEventListener('click', e => e.preventDefault());
+
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+            cb.addEventListener('change', () => {
+            // 清空所有行的高亮
+            document.querySelectorAll('tr').forEach(row => row.classList.remove('highlight-row'));
+
+            // 找出所有当前被勾选的 checkbox
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkedBox => {
+                const targets = checkedBox.dataset.target?.split(' ') || [];
+                targets.forEach(id => {
+                const row = document.getElementById(id);
+                if (row) row.classList.add('highlight-row');
+                });
+            });
+            });
         });
     </script>
       
