@@ -5177,8 +5177,8 @@ figcaption {
 }
 
 .coverwrapper {
-  width: 94.0009%;
-  height: 28vh;
+  width: 96%;
+  min-height: 23vh;
   float: none;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
