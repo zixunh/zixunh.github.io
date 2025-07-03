@@ -3,3 +3,4 @@
 .vscode
 viewer/favicon.png
 viewer/*.sh
+index_hide.html
