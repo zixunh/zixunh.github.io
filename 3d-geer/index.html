@@ -332,13 +332,17 @@
                 </p> -->
                 <section>
                     <p>
-                      <strong>3D Gaussian Splatting (3DGS)</strong> has rapidly become one of the most influential paradigms in neural rendering.
+                      3D Gaussian Splatting (3DGS) has rapidly become one of the most influential paradigms in neural rendering.
                       It delivers impressive real-time performance while maintaining high visual fidelity, making it a strong alternative to NeRF-style volumetric methods.
                       But there is a fundamental problem hiding beneath its success:
                     </p>
                   
-                    <blockquote style="border-left: 4px solid #DF62D3; padding-left: 1em; margin: 1.5em 0; font-size: 1.1em;">
+                    <!-- <blockquote style="border-left: 4px solid #DF62D3; padding-left: 1em; margin: 1.5em 0; font-size: 1.1em;">
                       <strong>Splatting doesn't obey exactness in projective geometry.</strong>
+                    </blockquote> -->
+
+                    <blockquote style="font-size: 14px;">
+                        <strong>Splatting doesn't obey exactness in projective geometry.</strong>
                     </blockquote>
                   
                     <p>
@@ -349,14 +353,13 @@
                     <hr>
                   
                     <p>
-                      In this work, we introduce <strong>3DGEER (3D Gaussian Exact and Efficient Rendering)</strong> — a framework that achieves:
+                      Can Gaussian rendering be both exact and fast without relying on lossy splatting? <strong>3DGEER</strong> (3D Gaussian Exact and Efficient Rendering) answers this question with a resounding "Yes" by introducing:
                     </p>
                   
                     <ul>
-                      <li>✅ Projective exactness</li>
-                      <li>✅ Real-time efficiency</li>
-                      <li>✅ Compatibility with generic camera models (pinhole + fisheye)</li>
-                      <li>✅ Strong generalization to extreme FoV</li>
+                      <li>Projective <strong>exactness</strong> + Real-time <strong>efficiency</strong></li>
+                      <li>Compatibility with generic camera models (pinhole / fisheye) + Strong generalization to <strong>extreme FoV</strong></li>
+                      <li>Adaptation to <strong>widely-used</strong> GS frameworks including <code>diff-gaussian-rasterization</code>, <code>gsplat</code>, <code>drivestudio</code></li>
                     </ul>
                   </section>
             </div>
@@ -560,172 +563,7 @@
         
 
         <div class="row comp-margin" style="margin-top: 10px;">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Visual Result <small>(<a href="comparison/index_result.html">click to zoom-in.</a>)</small>
-                </h3>
-                <!-- <p class="text-justify" style="margin-top: 10px;">
-                    Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
-                    And our key insights are as follows: (i) We first propose volumetric rendering with first-principle derived, closed-form solution of both exact ray-Gaussian integral and association; 
-                    (ii) We present high speed rendering using an exact and efficient ray-particle association method;
-                    (iii) We provide more spatially uniform color supervision with an equiangular ray sampling strategy;
-                </p> -->
-                <!-- <p class="text-justify">
-                    Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
-                </p> -->
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    High-Quality Large FoV Results
-                </h4>
-                <table width="100%">
-                    <tr>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/scannet3.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/scannet1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/alameda1_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/alameda2_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/alameda3_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/berlin5_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/scannet4.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/berlin2_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/berlin1_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/london1_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/london2_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/nyc1_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Highly Distorted & Close-Up Views
-                </h4>
-                <table width="100%">
-                    <tr>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/berlin3_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/berlin4_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/berlin8_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/nyc2_web.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Cross-Camera Rendering <small>(train: FE 1/8; test: PH 1/4)</small>
-                </h4>
-                <table width="100%">
-                    <tr>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/fish2pin_demo1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/fish2pin_demo2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/fish2pin_demo3.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <video width="100%"  muted loop autoplay>
-                                <source src="comparison/results/our_video/fish2pin_demo4.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </td>
-                    </tr>
-                </table>
-                <p class="text-justify" style="color: gray; margin-top: 10px;">⚠️ HD video loading time may vary based on your internet speed and available browser memory.</p>
-            </div>
+            
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Visual Comparison <small>(<a href="comparison/index_comp.html">check more results.</a>)</small>
@@ -735,6 +573,54 @@
                     remaining runtime-efficient — 5× faster than 3DPRT (e.g., EVER, 3DGRT) and comparable to 3DGS, with no sacrifice in exactness.
                 </p>
             </div>
+
+
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Out-Of-Distribution (OOD) + Extreme-Wide FoV Views
+                </h4>
+                <p class="text-justify">
+                    Side-by-Side Comparison on Close-Up Parking Data: 3DGEER's PBF association (Right) has less popping issues and grid-line-error artifacts compared w/ UT (Left) association.
+                </p>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">3DGUT</p>
+                            <video id="video_comp1" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/gut_render.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <p style="text-align: center;">Ours (3DGEER)</p>
+                            <video id="video_comp2" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/geer_render.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <!-- <p style="text-align: center;">3DGUT</p> -->
+                            <video id="video_comp1" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/gut_train_gut_render.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <!-- <p style="text-align: center;">Ours</p> -->
+                            <video id="video_comp2" width="100%"  muted loop autoplay>
+                                <source src="comparison/results/gut_train_geer_render.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
+                <!-- <p class="text-justify" style="color: gray; margin-top: 10px;">⚠️ HD video loading time may vary based on your internet speed and available browser memory.</p> -->
+            </div>
+
             <div class="col-md-8 col-md-offset-2">
                 <h4>
                     MipNeRF360 (Pinhole)
@@ -911,37 +797,176 @@
                         </td>
                     </tr>
                 </table>
+                <p class="text-justify" style="color: gray; margin-top: 10px;">⚠️ HD video loading time may vary based on your internet speed and available browser memory.</p>
             </div>
 
-
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    More HD Visual Result <small>(<a href="comparison/index_result.html">click to zoom-in.</a>)</small>
+                </h3>
+                <!-- <p class="text-justify" style="margin-top: 10px;">
+                    Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
+                    And our key insights are as follows: (i) We first propose volumetric rendering with first-principle derived, closed-form solution of both exact ray-Gaussian integral and association; 
+                    (ii) We present high speed rendering using an exact and efficient ray-particle association method;
+                    (iii) We provide more spatially uniform color supervision with an equiangular ray sampling strategy;
+                </p> -->
+                <!-- <p class="text-justify">
+                    Our method consistently outperforms SOTA approaches across multiple datasets, with notable gains on wide-FoV neural reconstruction benchmarks.
+                </p> -->
+            </div>
             <div class="col-md-8 col-md-offset-2">
                 <h4>
-                    Customized Data OOD Extreme FoV Views
+                    High-Quality Large FoV Results
                 </h4>
-                <p class="text-justify">
-                    Side-by-Side Comparison on Close-Up Parking Data: 3DGEER's PBF association (Right) has less popping issues and no grid-line artifacts compared w/ UT (Left) association.
-                </p>
                 <table width="100%">
                     <tr>
                         <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <p style="text-align: center;">3DGUT</p>
-                            <video id="video_comp1" width="100%"  muted loop autoplay>
-                                <source src="comparison/results/gut_render.mp4" type="video/mp4">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/scannet3.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </td>
                         <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
-                            <p style="text-align: center;">Ours</p>
-                            <video id="video_comp2" width="100%"  muted loop autoplay>
-                                <source src="comparison/results/geer_render.mp4" type="video/mp4">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/scannet1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/alameda1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/alameda2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/alameda3_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/berlin5_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/scannet4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/berlin2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/berlin1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/london1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/london2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/nyc1_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Highly Distorted & Close-Up Views
+                </h4>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/berlin3_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/berlin4_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/berlin8_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/nyc2_web.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Cross-Camera Rendering <small>(train: FE 1/8; test: PH 1/4)</small>
+                </h4>
+                <table width="100%">
+                    <tr>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/fish2pin_demo1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/fish2pin_demo2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/fish2pin_demo3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td align="left" valign="top" width="22%" style="padding-right: 5px; padding-left: 5px;">
+                            <video width="100%"  muted loop autoplay>
+                                <source src="comparison/results/our_video/fish2pin_demo4.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </td>
                     </tr>
                 </table>
                 <p class="text-justify" style="color: gray; margin-top: 10px;">⚠️ HD video loading time may vary based on your internet speed and available browser memory.</p>
-
             </div>
+            
         </div>
 
             <!-- <div class="col-md-8 col-md-offset-2">
