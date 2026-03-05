@@ -1,8 +1,0 @@
-@InProceedings{Zhuang_2023_ICCV,
-    author    = {Zhuang, Xinwei and Huang, Zixun and Zeng, Wentao and Caldas, Luisa},
-    title     = {MARL: Multi-scale Archetype Representation Learning for Urban Building Energy Modeling},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
-    month     = {October},
-    year      = {2023},
-    pages     = {1565-1572}
-}
