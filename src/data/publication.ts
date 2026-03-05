@@ -72,7 +72,7 @@ export const publicationData: Publication[] = [
     year: "2026",
     conference: "CVPR",
     title: "NexusFlow: Unifying Disparate Tasks under Partial Supervision via Invertible Flow Networks",
-    authors: "Fangzhou Lin, Yuping Wang, Yuliang Guo†, Zixun Huang, Xinyu Huang, Haichong Zhang, Kazunori Yamada, Zhengzhong Tu, Liu Ren, Ziming Zhang†",
+    authors: "Fangzhou Lin, Yuping Wang, Yuliang Guo, Zixun Huang, Xinyu Huang, Haichong Zhang, Kazunori Yamada, Zhengzhong Tu, Liu Ren, Ziming Zhang",
     tldr: "Can we learn across multiple tasks when Task 1 data is collected in region A and Task 2 data in region B? We introduce NexusFlow, a plug-and-play framework based on invertible flow networks that is effective for Partially Supervised Multi-Task Learning (PS-MTL) and the joint learning of diverse dense and sparse prediction tasks.",
     imageUrl:"https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/nexux.png",
     links: [
@@ -90,7 +90,7 @@ export const publicationData: Publication[] = [
     year: "2025",
     conference: "CVPR (Workshop Oral)",
     title: "Robust 6DoF Pose Estimation Against Depth Noise and a Comprehensive Evaluation on a Mobile Dataset",
-    authors: "Zixun Huang*, Keling Yao*, Seth Z. Zhao, Chuanyu Pan, Allen Y. Yang†",
+    authors: "Zixun Huang*, Keling Yao*, Seth Z. Zhao, Chuanyu Pan, Allen Y. Yang",
     tldr: "We introduce DTTD-Mobile, a benchmark for evaluating 6DoF pose estimation under noisy mobile depth sensing. We further propose DTTD-Net, a Fourier-enhanced RGBD fusion architecture designed to improve robustness against low-quality depth inputs.",
     imageUrl:"https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/WCWDIehG2-xa_VP6TS28G.gif",
     // paperUrl: "https://openaccess.thecvf.com/content/CVPR2025W/MAI/html/Huang_Robust_6DoF_Pose_Estimation_Against_Depth_Noise_and_a_Comprehensive_CVPRW_2025_paper.html",
