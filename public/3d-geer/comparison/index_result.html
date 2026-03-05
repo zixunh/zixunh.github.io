@@ -1,0 +1,763 @@
+
+<meta charset="UTF-8">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      chtml: {
+        scale: 0.9,
+        mathmlSpacing: false,
+        exFactor: ".6em",
+        displayAlign: 'left',
+        displayIndent: '2em',
+        matchFontHeight: true,
+        scriptspace: .5,
+        skipAttributes: {},
+        ex: 6,
+        width: 'container',
+        linebreaks: { automatic: true },
+        fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
+        adaptiveCSS: true
+      },
+      loader: {
+        load: ['[tex]/ams']
+      }
+    };
+</script>  
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+/*    font-family: "Lato", "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+h1 {
+    font-weight: 300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+a:link,a:visited {
+    color: #1772d0;
+    text-decoration: none;
+}
+a:hover {
+    color: #f09228;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+.paper-title {
+    padding: 16px 0px 16px 0px;
+}
+
+.row, .author-row, .affil-row {
+     overflow: auto;
+}
+.author-row, .affil-row {
+    font-size: 18px;
+    font-weight: 400;
+}
+.authors {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 16px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    /*font-style: italic;*/
+    color: #666;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+video {
+    display: block;
+    margin: auto;
+}
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+/*.supp-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 150px;
+  font-weight: 600;
+}
+.supp-btn:hover {
+    opacity: 0.85;
+}*/
+
+.supp-btn {
+  background-color: #fff;
+  border: 1.5px solid #000;
+  color: #000 !important;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 8px;
+  padding: 8px 8px;
+  width: 150px;
+  font-weight: 400;
+}
+.supp-btn:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+
+.supp-btn-wide {
+    background-color: #fff;
+    border: 1.5px solid #000;
+    color: #000 !important;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin: 8px;
+    padding: 8px 8px;
+    width: 250px;
+    font-weight: 400;
+  }
+  .supp-btn-wide:hover {
+    background-color: #000;
+    color: #fff !important;
+  }
+  
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.venue {
+/*    color: #1367a7;*/
+    color: #111;
+    font-weight: 400;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.one {
+  position: relative;
+}
+.two {
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl; /* vertical right-to-left */
+  transform: rotate(180deg); /* optional: flip the text to make it read from top to bottom */
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* adjust the gap between images here */
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* This ensures a square aspect ratio */
+    overflow: hidden; /* This ensures that the image won't go outside the container */
+    display: flex;
+    justify-content: center; /* centers horizontally, if needed */
+    align-items: center; /* centers vertically */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s;
+}
+
+.image-container .default-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.image-container .hover-image {
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none; /* ensures the invisible image doesn't capture mouse events */
+}
+
+.row:hover .hover-image {
+    opacity: 1;
+}
+
+.column-header {
+    grid-column-end: span 1; /* This makes sure that the header only spans one column */
+    /* Style the headers as needed */
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+.small-caps {
+    text-transform: uppercase; /* Capitalizes the text */
+    font-size: 0.8em;          /* Reduces the font size */
+    display: inline;
+}
+hr {
+    margin-bottom: 10px;
+}
+
+
+.prev-black {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.next-black {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+</style>
+
+
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,300italic,400italic,500italic,600italic,700italic' rel='stylesheet' type='text/css'>
+
+<head>
+    <title>3DGEER</title>
+    <meta property="og:description" content="3DGEER"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141699104-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-141699104-1');
+    </script>
+
+    <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+    ></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+    />
+    <style>
+        .before,
+        .after {
+          margin: 0;
+        }
+      
+        .before figcaption,
+        .after figcaption {
+          background: #fff;
+          border: 1px solid #c0c0c0;
+          border-radius: 12px;
+          color: #2e3452;
+          opacity: 0.8;
+          padding: 12px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          line-height: 100%;
+        }
+      
+        .before figcaption {
+          left: 12px;
+        }
+      
+        .after figcaption {
+          right: 12px;
+        }
+      </style>
+</head>
+
+
+<body>
+
+
+
+<div class="container">
+    
+    <div id="authors">
+  
+        <div class="affil-row">
+            <div class="venue text-center">Visual Results of the Paper:<br> <b>3DGEER: </b>Exact and Efficient Volumetric Rendering with 3D Gaussians</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="Results" class="container pt-2">
+    <div class="row">
+        <h2>High-Quality Large FoV Results</h2>
+    </div>
+    <hr>
+    </div>
+
+    <!-- <div class="container">
+        <div class="row"><div class="col">
+            <p class="text-justify">For the task of novel view synthesis, our method performs on par with or slightly better than 3D Gaussian Splatting and other state-of-the-art methods in terms of quality.</p>
+        </div></div>
+    </div> -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col col-6">
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/scannet3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/scannet1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/alameda1_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/alameda2_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/alameda3_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin1_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin5_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                
+            </div>
+
+            <div class="col col-6">
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/scannet4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <!-- <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/scannet2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin2_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/london3_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin1_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/london1_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/london2_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/nyc1_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                
+            </div>
+        </div>
+    </div>  
+
+    <div id="Results" class="container pt-2">
+    <div class="row" style="margin-top: 20px;">
+        <h2>Close-Up Views</h2>
+    </div>
+    <hr>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col col-6">
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin3_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin4_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+            <div class="col col-6">
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/berlin8_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p style="text-align: center;"></p>
+                <video width="100%"  muted loop autoplay>
+                    <source src="results/our_video/nyc2_web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>  
+
+        <div id="Results" class="container pt-2">
+            <div class="row" style="margin-top: 20px;">
+                <h2>Cross-Camera</h2>
+            </div>
+            <hr>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <p style="text-align: center; color: slateblue;">train: FE 1/8; test: PH 1/4</p>
+                <div class="col col-6">
+                    <!-- <p style="text-align: center;"></p> -->
+                    <video width="100%"  muted loop autoplay>
+                        <source src="results/our_video/fish2pin_demo1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+    
+                    <!-- <p style="text-align: center;"></p> -->
+                    <video width="100%"  muted loop autoplay>
+                        <source src="results/our_video/fish2pin_demo2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+    
+                </div>
+    
+                <div class="col col-6">
+                    <!-- <p style="text-align: center;"></p> -->
+                    <video width="100%"  muted loop autoplay>
+                        <source src="results/our_video/fish2pin_demo3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+    
+                    <!-- <p style="text-align: center;"></p> -->
+                    <video width="100%"  muted loop autoplay>
+                        <source src="results/our_video/fish2pin_demo4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>  
+   
+
+</div>
+
+<script>
+    const videos = [document.getElementById('video_comp1'),
+                    document.getElementById('video_comp2')];
+  
+    // Wait for both to know their durations
+    Promise.all(videos.map(v =>
+      v.readyState >= 1
+        ? Promise.resolve()
+        : new Promise(r => v.onloadedmetadata = r)
+    )).then(() => {
+      // Compute your common period: e.g. the max of their natural lengths
+      const period = Math.max(...videos.map(v => v.duration));
+  
+      videos.forEach(v => {
+        // playbackRate = naturalDuration ÷ targetPeriod
+        v.playbackRate = v.duration / period;
+        // now each video will take exactly `period` seconds per loop
+      });
+    });
+
+    const videos2 = [document.getElementById('video_comp3'),
+                    document.getElementById('video_comp4')];
+  
+    // Wait for both to know their durations
+    Promise.all(videos2.map(v =>
+      v.readyState >= 1
+        ? Promise.resolve()
+        : new Promise(r => v.onloadedmetadata = r)
+    )).then(() => {
+      // Compute your common period: e.g. the max of their natural lengths
+      const period = Math.max(...videos2.map(v => v.duration));
+  
+      videos2.forEach(v => {
+        // playbackRate = naturalDuration ÷ targetPeriod
+        v.playbackRate = v.duration / period;
+        // now each video will take exactly `period` seconds per loop
+      });
+    });
+
+    const videos3 = [document.getElementById('video_comp5'),
+                    document.getElementById('video_comp6')];
+  
+    // Wait for both to know their durations
+    Promise.all(videos3.map(v =>
+      v.readyState >= 1
+        ? Promise.resolve()
+        : new Promise(r => v.onloadedmetadata = r)
+    )).then(() => {
+      // Compute your common period: e.g. the max of their natural lengths
+      const period = Math.max(...videos3.map(v => v.duration));
+  
+      videos3.forEach(v => {
+        // playbackRate = naturalDuration ÷ targetPeriod
+        v.playbackRate = v.duration / period;
+        // now each video will take exactly `period` seconds per loop
+      });
+    });
+
+    const videos4 = [document.getElementById('video_comp7'),
+                    document.getElementById('video_comp8')];
+  
+    // Wait for both to know their durations
+    Promise.all(videos4.map(v =>
+      v.readyState >= 1
+        ? Promise.resolve()
+        : new Promise(r => v.onloadedmetadata = r)
+    )).then(() => {
+      // Compute your common period: e.g. the max of their natural lengths
+      const period = Math.max(...videos4.map(v => v.duration));
+  
+      videos4.forEach(v => {
+        // playbackRate = naturalDuration ÷ targetPeriod
+        v.playbackRate = v.duration / period;
+        // now each video will take exactly `period` seconds per loop
+      });
+    });
+</script>
+  
+
+<script>
+    $('#carouselReal').carousel({interval: 12000});
+    $('#carouselSynthetic').carousel({interval: 12000});
+    $('#carouselDistorted').carousel({interval: 4000});
+    $('#carouselTeaser').carousel({interval: 0});
+
+    $('#carouselReal').on('slide.bs.carousel', function (e) {
+        var $video = $(e.relatedTarget).find('video');
+        if ($video.length) {
+        $video.get(0).currentTime = 0; // Reset video to beginning
+        }
+    });
+
+    $('#carouselSynthetic').on('slide.bs.carousel', function (e) {
+        var $video = $(e.relatedTarget).find('video');
+        if ($video.length) {
+        $video.get(0).currentTime = 0; // Reset video to beginning
+        }
+    });
+
+</script>
+
+<div class="container"><div class="row">
+    <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-text w-100 text-center">
+            3DGEER
+        </span>
+    </div>
+    </nav>
+</div></div>
+
+</body>
+</html>
+
+
