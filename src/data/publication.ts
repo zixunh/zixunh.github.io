@@ -35,16 +35,16 @@ export const publicationData: Publication[] = [
         url: "https://arxiv.org/abs/2505.24053"
       },
       {
+        label: "Project Page",
+        url: "https://zixunh.github.io/3d-geer"
+      },
+      {
         label: "Code",
         url: "https://github.com/boschresearch/3dgeer"
       },
       {
         label: "Code (gsplat Extension)",
         url: "https://github.com/boschresearch/3dgeer/tree/gsplat_geer"
-      },
-      {
-        label: "Project Page",
-        url: "https://zixunh.github.io/3d-geer"
       },
       {
         label: "Video (Presentation)",
@@ -105,6 +105,10 @@ export const publicationData: Publication[] = [
           url: "https://openaccess.thecvf.com/content/CVPR2025W/MAI/html/Huang_Robust_6DoF_Pose_Estimation_Against_Depth_Noise_and_a_Comprehensive_CVPRW_2025_paper.html"
       },
       {
+          label: "Project Page",
+          url: "https://openark-berkeley.github.io/DTTDNet/"
+      },
+      {
           label: "Code",
           url: "https://github.com/augcog/DTTD2"
       },
@@ -117,12 +121,12 @@ export const publicationData: Publication[] = [
           url: "https://github.com/OpenARK-Berkeley/iphone-capture-app"
       },
       {
-          label: "Project Page",
-          url: "https://openark-berkeley.github.io/DTTDNet/"
-      },
-      {
           label: "Dataset Download",
           url: "https://huggingface.co/datasets/ZixunH/DTTD2-IPhone"
+      },
+      {
+          label: "Dataset Download (Robotics Task Extension)",
+          url: "https://huggingface.co/datasets/ZixunH/DTTD3_Impedance"
       },
       {
           label: "Video (Oral Presentation)",
