@@ -39,6 +39,10 @@ export const publicationData: Publication[] = [
         url: "https://github.com/boschresearch/3dgeer"
       },
       {
+        label: "Code (gsplat Extension)",
+        url: "https://github.com/boschresearch/3dgeer/tree/gsplat_geer"
+      },
+      {
         label: "Project Page",
         url: "https://zixunh.github.io/3d-geer"
       },
@@ -103,6 +107,14 @@ export const publicationData: Publication[] = [
       {
           label: "Code",
           url: "https://github.com/augcog/DTTD2"
+      },
+      {
+        label: "Code (Motion Capture Annotation)",
+        url: "https://github.com/augcog/DTTDv1"
+      },
+      {
+          label: "Code (Mobile App)",
+          url: "https://github.com/OpenARK-Berkeley/iphone-capture-app"
       },
       {
           label: "Project Page",
