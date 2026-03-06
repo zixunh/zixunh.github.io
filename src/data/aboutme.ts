@@ -22,7 +22,7 @@ export const aboutMe: AboutMe = {
   title: "Senior Research Scientist",
   institution: "Bosch | UC Berkeley | ZJU",
   // Note that links work in the description
-  description: "placeholder",
+  description: "Good representations arise from simple underlying structure.",
   email: "zixun@berkeley.edu",
   imageUrl:
     "https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/IMG_6514.PNG",
