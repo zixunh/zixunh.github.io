@@ -51,7 +51,7 @@ export const portfolioData: Portfolio[] = [
       }
     ],
     imageUrl:
-      "https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/bf9990_ba584c2402054128a3862532dbb3e4ca~mv2.gif",
+      "/shrine/assets/img/teaser.gif",
     // codeUrl: "https://github.com/username/project",
   },
   {
@@ -67,7 +67,7 @@ export const portfolioData: Portfolio[] = [
       {label: "Furniture Gallery 2", url: "https://www.zeeliang.com/carbonfiberfurniture"},
     ],
     imageUrl:
-      "https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/bf9990_b15d1c1da1d349e585c5f3b73bdaff02~mv2.gif",
+      "/formwork/assets/img/teaser.gif",
     // codeUrl: "https://github.com/username/project",
   },
   {
@@ -79,7 +79,7 @@ export const portfolioData: Portfolio[] = [
       {label: "Video (Fabrication Process)", url: "https://youtu.be/d-jheGgC-4k"},
     ],
     imageUrl:
-      "https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/f967852a9f29cb1868ca83a2b7bd5d.gif",
+      "/uav/assets/img/teaser.gif",
     // codeUrl: "https://github.com/username/project",
   }
 ];
