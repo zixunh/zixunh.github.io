@@ -46,8 +46,12 @@ export const publicationData: Publication[] = [
         url: "https://github.com/boschresearch/3dgeer/tree/gsplat_geer"
       },
       {
-        label: "Video (Presentation)",
+        label: "Video (Supplementary)",
         url: "https://www.youtube.com/live/9l2nXoQj5s8?si=7u1l3VZt2iM0n9kL"
+      },
+      {
+        label: "Video (ICLR Presentation)",
+        url: "https://iclr.cc/virtual/2026/poster/10011512"
       }
     ]
     // if you have an image in public/images, you can use it like this:
