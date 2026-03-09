@@ -71,6 +71,22 @@ export const portfolioData: Portfolio[] = [
     // codeUrl: "https://github.com/username/project",
   },
   {
+    title: "MARL: Multi-scale Archetype Representation Learning for Urban Building Energy Modeling",
+    description:
+      "We develop a self-supervised framework for automatically generating localized building archetypes with detailed geometric representations for urban energy modeling.",
+    technologies: ["Representation Learning", "Energy Modeling"],
+    links: [
+      {label: "ICCV Workshop (CVAAD) 2023", url: "https://openaccess.thecvf.com/content/ICCV2023W/CVAAD/html/Zhuang_MARL_Multi-scale_Archetype_Representation_Learning_for_Urban_Building_Energy_Modeling_ICCVW_2023_paper.html"},
+      {label: "ACADIA 2023", url: "https://www.researchgate.net/publication/375183489_Encoding_Urban_Ecologies_Automated_Building_Archetype_Generation_through_Self-Supervised_Learning_for_Energy_Modeling"},
+      {label: "Video (Oral Presentation)", url: "https://www.youtube.com/watch?v=cUzrrltZBcY"},
+      {label: "Code", url: "https://github.com/zixunh/MARL"},
+      {label: "Poster", url: "https://xinwei-zhuang.github.io/files/2023%20ICCV%20poster.pdf"},
+    ],
+    imageUrl:
+      "/marl/assets/img/teaser.png",
+    // codeUrl: "https://github.com/username/project",
+  },
+  {
     title: "Autonomous Discrete Construction with UAV Systems",
     description:
       "Development of a UAV-based discrete stacking system using onboard gripping and motion control. The project demonstrates autonomous aerial assembly through integrated perception, control, and fabrication workflows.",
