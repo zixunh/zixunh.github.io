@@ -43,7 +43,7 @@ export const publicationData: Publication[] = [
       },
       {
         label: "Code (gsplat Extension)",
-        url: "https://github.com/boschresearch/3dgeer/tree/gsplat_geer"
+        url: "https://github.com/boschresearch/3dgeer/tree/gsplat-geer"
       },
       {
         label: "Video (Supplementary)",
