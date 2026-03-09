@@ -71,7 +71,7 @@ export const portfolioData: Portfolio[] = [
     // codeUrl: "https://github.com/username/project",
   },
   {
-    title: "MARL: Multi-scale Archetype Representation Learning for Urban Building Energy Modeling",
+    title: "Archetype Representation Learning for Urban Energy Modeling",
     description:
       "We develop a self-supervised framework for automatically generating localized building archetypes with detailed geometric representations for urban energy modeling.",
     technologies: ["Representation Learning", "Energy Modeling"],
