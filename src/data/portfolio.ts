@@ -77,7 +77,7 @@ export const portfolioData: Portfolio[] = [
     technologies: ["Representation Learning", "Energy Modeling"],
     links: [
       {label: "ICCV Workshop (CVAAD) 2023", url: "https://openaccess.thecvf.com/content/ICCV2023W/CVAAD/html/Zhuang_MARL_Multi-scale_Archetype_Representation_Learning_for_Urban_Building_Energy_Modeling_ICCVW_2023_paper.html"},
-      {label: "ACADIA 2023", url: "https://www.researchgate.net/publication/375183489_Encoding_Urban_Ecologies_Automated_Building_Archetype_Generation_through_Self-Supervised_Learning_for_Energy_Modeling"},
+      {label: "ACADIA 2023", url: "/marl/assets/paper/ACADIA2023_MARL.pdf"},
       {label: "Video (Oral Presentation)", url: "https://www.youtube.com/watch?v=cUzrrltZBcY"},
       {label: "Code", url: "https://github.com/zixunh/MARL"},
       {label: "Poster", url: "https://xinwei-zhuang.github.io/files/2023%20ICCV%20poster.pdf"},
