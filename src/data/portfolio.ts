@@ -60,9 +60,9 @@ export const portfolioData: Portfolio[] = [
       "This line of work explores robotic fabrication techniques for reusable casting molds in curved concrete construction. The research addresses the material and economic inefficiency of single-use molds by developing hybrid clay-foam formwork systems fabricated with 6-axis robotic arms.",
     technologies: ["KUKA Programming", "3D Modeling", "3D Printing", "Rhino3D", "Arduino"],
     links: [
-      {label: "2020 SIGraDi", url: "https://www.proceedings.blucher.com.br/article-details/robotic-fabrication-of-sustainable-hybrid-formwork-with-clay-and-foam-for-concrete-casting-35460"},
-      {label: "2019 IASS", url: "https://www.ingentaconnect.com/content/iass/piass/2019/00002019/00000006/art00004?crawler=true&mimetype=application/pdf"},
-      {label: "Video (2020 SIGraDi)", url: "https://www.youtube.com/watch?v=WWiFGQ9dVF4"},
+      {label: "SIGraDi 2020", url: "https://www.proceedings.blucher.com.br/article-details/robotic-fabrication-of-sustainable-hybrid-formwork-with-clay-and-foam-for-concrete-casting-35460"},
+      {label: "IASS 2019", url: "https://www.ingentaconnect.com/content/iass/piass/2019/00002019/00000006/art00004?crawler=true&mimetype=application/pdf"},
+      {label: "Video (SIGraDi 2020)", url: "https://www.youtube.com/watch?v=WWiFGQ9dVF4"},
       {label: "Furniture Gallery 1", url: "https://www.zeeliang.com/emerging"},
       {label: "Furniture Gallery 2", url: "https://www.zeeliang.com/carbonfiberfurniture"},
     ],
