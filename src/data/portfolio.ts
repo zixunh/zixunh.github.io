@@ -16,7 +16,7 @@ export const portfolioData: Portfolio[] = [
     title: "China's First All-Carbon Fiber Architectural Structure Fabricated by Robotic Manipulation",
     description:
       "A full-scale architectural structure fabricated using robotic carbon-fiber winding. The project investigates lightweight structural systems enabled by robotic precision and material optimization. The resulting structure achieves a density of 18 kg/m³ with a load-bearing capacity of 400 kg.",
-    award: "Featured by CNN and 10+ international media outlets",
+    award: "Featured by CCTV and 10+ international media outlets",
     technologies: ["KUKA Programming", "3D Modeling", "3D Printing", "SolidWorks"],
     links: [
       {
