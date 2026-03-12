@@ -1,0 +1,7 @@
+Research Questions
+
+1. How should geometric structure be embedded in neural representations of 3D scenes?
+
+2. How can neural scene representations scale to real-world sensing systems?
+
+3. How can AI systems build representations that support interaction with the physical world?

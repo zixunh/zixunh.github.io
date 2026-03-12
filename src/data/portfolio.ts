@@ -3,6 +3,7 @@ export interface Portfolio {
   description: string;
   technologies?: string[];
   imageUrl?: string;
+  award?: string;
   links?: {
     label: string;
     url: string;
@@ -15,6 +16,7 @@ export const portfolioData: Portfolio[] = [
     title: "China's First All-Carbon Fiber Architectural Structure Fabricated by Robotic Manipulation",
     description:
       "A full-scale architectural structure fabricated using robotic carbon-fiber winding. The project investigates lightweight structural systems enabled by robotic precision and material optimization. The resulting structure achieves a density of 18 kg/m³ with a load-bearing capacity of 400 kg.",
+    award: "Featured by CNN and 10+ international media outlets",
     technologies: ["KUKA Programming", "3D Modeling", "3D Printing", "SolidWorks"],
     links: [
       {
@@ -74,6 +76,7 @@ export const portfolioData: Portfolio[] = [
     title: "Archetype Representation Learning for Urban Energy Modeling",
     description:
       "We develop a self-supervised framework for automatically generating localized building archetypes with detailed geometric representations for urban energy modeling.",
+    award: "Cited by LBNL and ORNL",
     technologies: ["Representation Learning", "Energy Modeling"],
     links: [
       {label: "ICCV Workshop (CVAAD) 2023", url: "https://openaccess.thecvf.com/content/ICCV2023W/CVAAD/html/Zhuang_MARL_Multi-scale_Archetype_Representation_Learning_for_Urban_Building_Energy_Modeling_ICCVW_2023_paper.html"},

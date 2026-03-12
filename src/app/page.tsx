@@ -37,18 +37,32 @@ export default function Home() {
                   dangerouslySetInnerHTML={{ __html: aboutMe.description }}
                 /> */}
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  I am an AI Research Scientist at Bosch USA working on scalable 3D vision and graphics.
-                  My research focuses on geometric representation learning, differentiable rendering, and neural scene modeling.
+                  I am an AI Research Scientist at Bosch USA working on 3D vision and graphics.
+                  My research focuses on geometric representation learning, differentiable rendering, and neural scene modeling for real-world sensing systems.
                   <br />
                   <br />
-                  I study how geometric structure shapes learned representations, seeking simple and principled formulations that generalize.
+                  I study how geometric structure shapes learned representations, seeking simple and principled formulations that scale and generalize. 
+                </p>
+                <blockquote className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600 border-l-4 border-zinc-300 pl-4 italic text-zinc-600 my-6">
+                  Good representations arise from simple underlying structure.
+                </blockquote>
+                <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
+                  More details about my long-term research questions can be found <a href="questions.txt">here</a>. 
+                  These interests originate from my early exploration of robotic fabrication and the geometry of physical structures.
+                </p>
+                {/* <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
+                  I am an AI Research Scientist at Bosch USA working on 3D perception and neural scene representations.
+                  My research studies how AI systems build representations of the physical world. I focus on geometric representation learning, differentiable rendering, and neural scene modeling, with the goal of developing simple and principled formulations that scale to real-world sensing systems.
+                  <br />
+                  <br />
+                  I am particularly interested in how geometric structure shapes learned representations and how simple underlying structure can lead to robust and generalizable models of 3D environments.
                 </p>
                 <blockquote className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600 border-l-4 border-zinc-300 pl-4 italic text-zinc-600 my-6">
                   Good representations arise from simple underlying structure.
                 </blockquote>
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   My early work explored robotic fabrication and the geometry of physical structures.
-                </p>
+                </p> */}
               </section>
             )}
 
