@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { readFileSync } from "fs";
 import path from "path";
 
-const CORRECT_PASSWORD = process.env.QUESTIONS_PASSWORD ?? "research";
+const CORRECT_PASSWORD = process.env.QUESTIONS_PASSWORD ?? "363837";
 
 export async function POST(req: NextRequest) {
   const { password } = await req.json();
