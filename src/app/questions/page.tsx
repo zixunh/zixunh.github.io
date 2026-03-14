@@ -37,6 +37,33 @@ export default function QuestionsPage() {
   }
 
   if (unlocked && content !== null) {
+    // Parse the plain-text content into structured sections for clean rendering.
+    // A section starts when a line is immediately followed by a line of dashes (--- or ===).
+    const lines = content.split("\n");
+    type Block =
+      | { type: "heading"; text: string }
+      | { type: "paragraph"; text: string }
+      | { type: "item"; text: string };
+    const blocks: Block[] = [];
+    let lineIndex = 0;
+    while (lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      const next = lines[lineIndex + 1] ?? "";
+      if (/^-{2,}$/.test(next.trim()) || /^={2,}$/.test(next.trim())) {
+        // Current line is a section heading; skip the dash line too.
+        if (line.trim()) blocks.push({ type: "heading", text: line.trim() });
+        lineIndex += 2;
+      } else if (/^\d+\.\s/.test(line.trim())) {
+        blocks.push({ type: "item", text: line.trim() });
+        lineIndex += 1;
+      } else if (line.trim()) {
+        blocks.push({ type: "paragraph", text: line.trim() });
+        lineIndex += 1;
+      } else {
+        lineIndex += 1;
+      }
+    }
+
     return (
       <div className="min-h-screen bg-[#FFFCF8]">
         <div className="max-w-screen-lg mx-auto px-8 py-24">
@@ -46,9 +73,38 @@ export default function QuestionsPage() {
           >
             ← Back
           </Link>
-          <pre className="font-serif text-sm leading-relaxed text-zinc-700 whitespace-pre-wrap mt-6">
-            {content}
-          </pre>
+          <div className="mt-6 space-y-3">
+            {blocks.map((block, blockIndex) => {
+              if (block.type === "heading") {
+                return (
+                  <h2
+                    key={blockIndex}
+                    className="font-serif text-base font-semibold text-zinc-800 mt-6 first:mt-0"
+                  >
+                    {block.text}
+                  </h2>
+                );
+              }
+              if (block.type === "item") {
+                return (
+                  <p
+                    key={blockIndex}
+                    className="font-serif text-sm leading-relaxed text-zinc-700 pl-4"
+                  >
+                    {block.text}
+                  </p>
+                );
+              }
+              return (
+                <p
+                  key={blockIndex}
+                  className="font-serif text-sm leading-relaxed text-zinc-700"
+                >
+                  {block.text}
+                </p>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
