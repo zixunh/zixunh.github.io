@@ -1,0 +1,7 @@
+Research Questions
+------------------
+1. What forms of geometric structure should be explicitly encoded in neural representations of 3D scenes?
+
+2. What representations enable neural scene models to scale with real-world sensing systems?
+
+3. What representations enable AI systems to reason about and interact with the physical world?
