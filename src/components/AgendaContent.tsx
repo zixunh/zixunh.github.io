@@ -4,14 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 const CORRECT_PASSWORD =
-  process.env.NEXT_PUBLIC_QUESTIONS_PASSWORD ?? "research";
+  process.env.NEXT_PUBLIC_AGENDA_PASSWORD ?? "research";
 
 interface Props {
   content: string;
   publicAccess: boolean;
 }
 
-export default function QuestionsContent({ content, publicAccess }: Props) {
+export default function AgendaContent({ content, publicAccess }: Props) {
   const [password, setPassword] = useState("");
   const [unlocked, setUnlocked] = useState(publicAccess);
   const [error, setError] = useState<string | null>(null);

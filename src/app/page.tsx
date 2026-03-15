@@ -47,7 +47,7 @@ export default function Home() {
                   Good representations arise from simple underlying structure.
                 </blockquote>
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  More details about my long-term research questions can be found <a href="questions.txt">here</a>. 
+                  More details about my long-term research questions can be found <a href="agenda.txt">here</a>. 
                   These interests originate from my early exploration of robotic fabrication and the geometry of physical structures.
                 </p>
                 {/* <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
