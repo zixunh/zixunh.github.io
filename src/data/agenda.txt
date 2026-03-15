@@ -1,3 +1,5 @@
+Research Agenda
+
 Core Problem
 ------------
 How should the structure of the physical world be represented in neural systems?
