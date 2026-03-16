@@ -83,7 +83,7 @@ export const portfolioData: Portfolio[] = [
       {label: "ACADIA 2023", url: "/marl/assets/paper/ACADIA2023_MARL.pdf"},
       {label: "Video (Oral Presentation)", url: "https://www.youtube.com/watch?v=cUzrrltZBcY"},
       {label: "Code", url: "https://github.com/zixunh/MARL"},
-      {label: "Poster", url: "https://xinwei-zhuang.github.io/files/2023%20ICCV%20poster.pdf"},
+      // {label: "Poster", url: "https://xinwei-zhuang.github.io/files/2023%20ICCV%20poster.pdf"},
     ],
     imageUrl:
       "/marl/assets/img/teaser.png",
