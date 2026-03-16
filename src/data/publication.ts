@@ -133,7 +133,7 @@ export const publicationData: Publication[] = [
       },
       {
           label: "Video (Oral Presentation)",
-          url: "https://www.youtube.com/live/hUC7SGEYsl0?si=2jWLkaSu9Twn8jee"
+          url: "https://www.youtube.com/live/hUC7SGEYsl0?si=nLoIi4lTeOEd0en3&t=22155"
       }
     ]
   },
