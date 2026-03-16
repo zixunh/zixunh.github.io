@@ -47,7 +47,7 @@ export const publicationData: Publication[] = [
       },
       {
         label: "Video (Supplementary)",
-        url: "https://www.youtube.com/live/9l2nXoQj5s8?si=7u1l3VZt2iM0n9kL"
+        url: "https://www.youtube.com/watch?v=Grl9jSMIgds"
       },
       {
         label: "Video (ICLR Presentation)",
