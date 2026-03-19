@@ -67,7 +67,7 @@ export const publicationData: Publication[] = [
     links: [
       {
           label: "Paper",
-          url: "https://arxiv.org/abs/2505.24053"
+          url: "https://arxiv.org/abs/2602.23559"
       },
       {
           label: "Project Page",
