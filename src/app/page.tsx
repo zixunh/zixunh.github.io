@@ -36,7 +36,7 @@ export default function Home() {
                   className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600"
                   dangerouslySetInnerHTML={{ __html: aboutMe.description }}
                 /> */}
-                <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
+                {/* <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   I am an AI Research Scientist at Bosch USA working on 3D vision and graphics.
                   My research focuses on geometric representation learning, differentiable rendering, and neural scene modeling for real-world sensing systems.
                   <br />
@@ -49,20 +49,20 @@ export default function Home() {
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   Some questions that motivate my research can be found <a href="questions.txt">here</a>. 
                   These interests originate from my early exploration of robotic fabrication and the geometry of physical structures.
-                </p>
-                {/* <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  I am an AI Research Scientist at Bosch USA working on 3D perception and neural scene representations.
-                  My research studies how AI systems build representations of the physical world. I focus on geometric representation learning, differentiable rendering, and neural scene modeling, with the goal of developing simple and principled formulations that scale to real-world sensing systems.
-                  <br />
-                  <br />
-                  I am particularly interested in how geometric structure shapes learned representations and how simple underlying structure can lead to robust and generalizable models of 3D environments.
+                </p> */}
+                <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
+                  I am an AI Research Scientist at Bosch USA working on 3D vision and neural scene representation. 
+                  My research asks a simple question: how can we build representations of the physical world that are both geometrically grounded and directly usable for interaction and decision-making?
+                  <br /><br />
+                  I focus on geometric representation learning, differentiable rendering, and neural scene modeling, with an emphasis on uncovering the simple structures that underlie complex real-world phenomena.
                 </p>
                 <blockquote className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600 border-l-4 border-zinc-300 pl-4 italic text-zinc-600 my-6">
-                  Good representations arise from simple underlying structure.
+                  I believe that scalable and generalizable representations come not from increasing model complexity, but from identifying the minimal structure that explains observations.
                 </blockquote>
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  My early work explored robotic fabrication and the geometry of physical structures.
-                </p> */}
+                  This perspective is shaped by my earlier work in robotic fabrication, where physical geometry, material constraints, and action are inherently coupled. 
+                  More broadly, I am interested in representations that tightly couple visual understanding with action, enabling systems that can both interpret and operate within the physical world.
+                </p>
               </section>
             )}
 
