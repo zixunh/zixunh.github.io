@@ -37,7 +37,14 @@ export function PublicationEntry({
           )}
         </div>
         <h3 className="font-serif text-md mb-3">{publication.title}</h3>
-        <p className="text-sm text-zinc-600 mb-4">{publication.authors}</p>
+        <p className="text-sm text-zinc-600 mb-4">
+          {publication.authors.split("Zixun Huang").map((part, i, arr) => (
+            <span key={i}>
+              {part}
+              {i < arr.length - 1 && <strong>Zixun Huang</strong>}
+            </span>
+          ))}
+        </p>
         {/* <div className="flex flex-row gap-6">
           {publication.paperUrl && (
             <a
