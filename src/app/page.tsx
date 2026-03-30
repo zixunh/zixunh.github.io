@@ -61,7 +61,7 @@ export default function Home() {
                 </blockquote>
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   This perspective is shaped by my earlier work in robotic fabrication, where physical geometry, material constraints, and action are inherently coupled. 
-                  More broadly, I am interested in representations that tightly couple visual understanding with action, enabling systems that can both interpret and operate within the physical world.
+                  More broadly, I am interested in representations that tightly couple geometric understanding with action, enabling systems that can both interpret and operate within the physical world.
                 </p>
               </section>
             )}
