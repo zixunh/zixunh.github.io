@@ -38,8 +38,12 @@ export const publicationData: Publication[] = [
         url: "/3d-geer/index.html"
       },
       {
-        label: "ICLR Slides Recording",
-        url: "https://iclr.cc/virtual/2026/poster/10011512"
+        label: "ICLR Slides",
+        url: "https://iclr.cc/media/iclr-2026/Slides/10011512_l8YHjDQ.pdf"
+      },
+      {
+        label: "Video (ICLR Presentation)",
+        url: "https://youtu.be/aj5wBBJyRFg"
       },
       {
         label: "Code",
