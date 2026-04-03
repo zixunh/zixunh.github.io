@@ -51,10 +51,10 @@ export default function Home() {
                   These interests originate from my early exploration of robotic fabrication and the geometry of physical structures.
                 </p> */}
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  I am an AI Research Scientist at Bosch USA working on 3D vision and neural scene representation. 
+                  I am an AI Research Scientist at Bosch USA working on 3D vision and neural scene representation for real-world systems. 
                   My research asks a simple question: how can we build representations of the physical world that are both geometrically grounded and directly usable for interaction and decision-making?
                   <br /><br />
-                  I focus on geometric representation learning, differentiable rendering, and neural scene modeling, with an emphasis on uncovering the simple structures that underlie complex real-world phenomena.
+                  I focus on geometric representation learning, differentiable rendering, and neural scene modeling, with the goal of enabling systems that can reliably perceive, reason about, and act in complex environments.
                 </p>
                 <blockquote className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600 border-l-4 border-zinc-300 pl-4 italic text-zinc-600 my-6">
                   I believe that scalable and generalizable representations come not from increasing model complexity, but from identifying the minimal structure that explains observations.
