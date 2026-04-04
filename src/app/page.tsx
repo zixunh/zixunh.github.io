@@ -51,17 +51,17 @@ export default function Home() {
                   These interests originate from my early exploration of robotic fabrication and the geometry of physical structures.
                 </p> */}
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  I am an AI Research Scientist at Bosch USA working on 3D vision and neural scene representation for real-world systems. 
-                  My research asks a simple question: how can we build representations of the physical world that are both geometrically grounded and directly usable for interaction and decision-making?
+                  I am an AI Research Scientist at Bosch USA working on 3D vision and neural scene representation. 
+                  My research asks a simple question: how can we build representations of the physical world that are both geometrically grounded and usable for interaction and decision-making?
                   <br /><br />
-                  I focus on geometric representation learning, differentiable rendering, and neural scene modeling, with the goal of enabling systems that can reliably perceive, reason about, and act in complex environments.
+                  I focus on geometric representation learning and differentiable rendering, with an emphasis on developing models that capture consistent 3D structure and support high-fidelity simulation in complex environments.
                 </p>
                 <blockquote className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600 border-l-4 border-zinc-300 pl-4 italic text-zinc-600 my-6">
-                  I believe that scalable and generalizable representations come not from increasing model complexity, but from identifying the minimal structure that explains observations.
+                  I believe that scalable and generalizable representations come not from increasing model complexity, but from identifying the minimal structure underlying observations.
                 </blockquote>
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
-                  This perspective is shaped by my earlier work in robotic fabrication, where physical geometry, material constraints, and action are inherently coupled. 
-                  More broadly, I am interested in representations that tightly couple geometric understanding with action, enabling systems that can both interpret and operate within the physical world at scale.
+                  This perspective is shaped by my earlier work in robotic fabrication, where geometry, material constraints, and action are inherently coupled. 
+                  More broadly, I am interested in enabling scalable systems that can operate reliably in the physical world.
                 </p>
               </section>
             )}
