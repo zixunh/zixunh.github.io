@@ -61,7 +61,7 @@ export default function Home() {
                 </blockquote>
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   This perspective is shaped by my earlier work in robotic fabrication, where geometry, material constraints, and action are inherently coupled. 
-                  More broadly, I am interested in enabling scalable systems that can operate reliably in the physical world.
+                  Building on this, I am broadly interested in enabling scalable systems that can operate reliably and efficiently in the physical world.                
                 </p>
               </section>
             )}
