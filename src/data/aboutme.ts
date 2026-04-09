@@ -25,7 +25,7 @@ export const aboutMe: AboutMe = {
   description: "Good representations arise from simple underlying structure.",
   email: "zixun@berkeley.edu",
   imageUrl:
-    "https://69a8c69562aea864bacd7cca.imgix.net/my_research_website/IMG_6514.PNG",
+    "/ZIXUNH.PNG",
   googleScholarUrl: "https://scholar.google.com/citations?user=-LG4tX8AAAAJ&hl=en",
   // githubUsername: "zixunh",
   linkedinUsername: "zixunhuang",
