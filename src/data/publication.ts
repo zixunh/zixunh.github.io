@@ -27,7 +27,7 @@ export const publicationData: Publication[] = [
     // bibtex: "https://arxiv.org/abs/2505.24053.bib",
     tldr: "We present 3DGEER, a formulation for exact and efficient Gaussian rendering under generic camera models, eliminating approximation errors introduced by splatting-based methods.",
     imageUrl: "/3d-geer/assets/img/teaser.gif",
-    award: "ICLR Score: Top 1%",
+    award: "Top 1% ICLR Score",
     links: [
       {
         label: "Paper",
