@@ -68,6 +68,7 @@ export const publicationData: Publication[] = [
     authors: "Cho-Ying Wu, Zixun Huang, Xinyu Huang, Liu Ren",
     tldr: "The work synthesizes view-aligned RGB-X pairs (thermal, NIR, SAR, Normal maps ...) from either raw sensor sequences or style maps to facilitate multi-modality learning. The work proposes a match-densify-consolidate framework to work from cross-modal image matching, guided densification, and consolidation in 3DGS.",
     imageUrl:"/rgbx-nvs/assets/img/teaser.gif",
+    award: "Highlight (Top 3%)",
     links: [
       {
           label: "Paper",
@@ -99,11 +100,12 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2025",
-    conference: "CVPR (Workshop Oral)",
+    conference: "CVPR Mobile AI Workshop",
     title: "Robust 6DoF Pose Estimation Against Depth Noise and a Comprehensive Evaluation on a Mobile Dataset",
     authors: "Zixun Huang*, Keling Yao*, Seth Z. Zhao, Chuanyu Pan, Allen Y. Yang",
     tldr: "We introduce DTTD-Mobile, a benchmark for evaluating 6DoF pose estimation under noisy mobile depth sensing. We further propose DTTD-Net, a Fourier-enhanced RGBD fusion architecture designed to improve robustness against low-quality depth inputs.",
     imageUrl:"/dttdnet/assets/img/teaser.gif",
+    award: "Oral Presentation",
     // paperUrl: "https://openaccess.thecvf.com/content/CVPR2025W/MAI/html/Huang_Robust_6DoF_Pose_Estimation_Against_Depth_Noise_and_a_Comprehensive_CVPRW_2025_paper.html",
     // codeUrl: "https://github.com/augcog/DTTD2",
     links: [
