@@ -26,7 +26,7 @@ export const aboutMe: AboutMe = {
   email: "zixun@berkeley.edu",
   imageUrl: "/ZIXUNH.PNG",
   googleScholarUrl: "https://scholar.google.com/citations?user=-LG4tX8AAAAJ&hl=en",
-  githubUsername: "zixunh",
+  // githubUsername: "zixunh",
   linkedinUsername: "zixunhuang",
   // twitterUsername: "zixun_h",
   // blogUrl: "https://",
