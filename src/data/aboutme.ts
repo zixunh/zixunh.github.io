@@ -33,5 +33,5 @@ export const aboutMe: AboutMe = {
   // cvUrl: "https://",
   // institutionUrl: "https://",
   // altName: "黄 梓洵",
-  // secretDescription: "I like cats.",
+  secretDescription: "Representation is not merely instrumental; it shapes how the world is revealed.",
 };
