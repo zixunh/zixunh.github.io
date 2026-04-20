@@ -25,7 +25,7 @@ export const publicationData: Publication[] = [
     // paperUrl: "https://arxiv.org/abs/2505.24053",
     // codeUrl: "https://github.com/boschresearch/3dgeer",
     // bibtex: "https://arxiv.org/abs/2505.24053.bib",
-    tldr: "We present 3DGEER, a formulation for exact and efficient Gaussian rendering under generic camera models, eliminating approximation errors introduced by splatting-based methods.",
+    tldr: "Can Gaussian rendering be both projective-exact and fast without relying on lossy splatting? We present 3DGEER, a formulation for exact and efficient Gaussian rendering under generic camera models, eliminating approximation errors introduced by splatting-based methods.",
     imageUrl: "/3d-geer/assets/img/teaser.gif",
     award: "Top 1% ICLR Score",
     links: [
@@ -103,7 +103,7 @@ export const publicationData: Publication[] = [
     conference: "CVPR Mobile AI Workshop",
     title: "Robust 6DoF Pose Estimation Against Depth Noise and a Comprehensive Evaluation on a Mobile Dataset",
     authors: "Zixun Huang*, Keling Yao*, Seth Z. Zhao, Chuanyu Pan, Allen Y. Yang",
-    tldr: "We introduce DTTD-Mobile, a benchmark for evaluating 6DoF pose estimation under noisy mobile depth sensing. We further propose DTTD-Net, a Fourier-enhanced RGBD fusion architecture designed to improve robustness against low-quality depth inputs.",
+    tldr: "Are current 3D object tracking methods truely robust enough for low-fidelity depth sensors like the iPhone LiDAR? We introduce DTTD-Mobile, a benchmark for evaluating 6DoF pose estimation under noisy mobile depth sensing. We further propose DTTD-Net, a Fourier-enhanced RGBD fusion architecture designed to improve robustness against low-quality depth inputs.",
     imageUrl:"/dttdnet/assets/img/teaser.gif",
     award: "Oral Presentation",
     // paperUrl: "https://openaccess.thecvf.com/content/CVPR2025W/MAI/html/Huang_Robust_6DoF_Pose_Estimation_Against_Depth_Noise_and_a_Comprehensive_CVPRW_2025_paper.html",
