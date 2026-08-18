@@ -19,7 +19,7 @@ export interface AboutMe {
 
 export const aboutMe: AboutMe = {
   name: "Zixun Huang",
-  title: "Senior Research Scientist",
+  title: "Staff Research Scientist",
   institution: "Bosch | UC Berkeley",
   // Note that links work in the description
   description: "Good representations arise from simple underlying structure.",

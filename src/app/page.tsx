@@ -50,7 +50,8 @@ export default function Home() {
                   Some questions that motivate my research can be found <a href="questions.txt">here</a>. 
                   These interests originate from my early exploration of robotic fabrication and the geometry of physical structures.
                 </p> */}
-                <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
+                
+                {/* <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   I am an AI Research Scientist at Bosch USA working on 3D vision and neural scene representation. 
                   My research asks a simple question: how can we build representations of the physical world that are both geometrically grounded and usable for interaction and decision-making?
                   <br /><br />
@@ -62,7 +63,14 @@ export default function Home() {
                 <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
                   This perspective is shaped by my earlier work in robotic fabrication, where geometry, material constraints, and action are inherently coupled. 
                   Building on this, I am broadly interested in enabling scalable systems that can operate reliably and efficiently in the physical world.                
+                </p> */}
+
+                <p className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600">
+                  I am an AI Research Scientist at Bosch working on 3D vision and geometric representation learning. My research explores how to build geometrically grounded representations of the physical world that support reconstruction, simulation, and interaction.
+                  <br /><br />
+                  I am particularly interested in identifying the minimal geometric structure needed for scalable and generalizable world representations. My perspective is shaped by my earlier work in robotic fabrication, where geometry, physical constraints, and action are inherently coupled.
                 </p>
+
               </section>
             )}
 
